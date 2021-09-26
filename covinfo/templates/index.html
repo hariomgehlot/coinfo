@@ -2,7 +2,7 @@
 <title>CoInfo</title>
 <meta charset="UTF-8">
 <head>
-<meta name="description" content="All informtion you need to know about CORONAVIRUS PANDEMIC (COVID-19), find out More here." /> 
+<meta name="description" content="All informtion you need to know about CORONAVIRUS PANDEMIC (COVID-19), find out More here." />
 </head>
 
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -31,7 +31,7 @@ body, html {
     <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACT</a>
     <a href="https://www.mohfw.gov.in/pdf/AAROGYASETUIVRS1921.pdf" class="w3-bar-item w3-button w3-hide-small w3-hover-red">Aarogya Setu IVRS <i class="fa fa-phone" aria-hidden="true"></i> 1921</a>
     <a href="https://www.mygov.in/covid-19/?cbps=1&target=webview&type=campaign&nid=0" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red"><i class="fa fa-search"></i> COVID-19</a>
-    <a href="https://www.icmr.gov.in/ctestlab.html" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red" onclick="toggleFunction()">TESTING LABS</a>
+    <a href="{%url 'tests'%}" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red" onclick="toggleFunction()">TESTING LABS</a>
   </div>
 
   <!-- Navbar on small screens -->
@@ -44,14 +44,14 @@ body, html {
 </div>
 
 
-<br><marquee behavior="scroll" direction="left"><p style="color:black">Source of data: The Indian council of medical research and Worldometer 
-Helpline Number :+91-11-23978046, Toll Free : 1075, Helpline Email ID :<a href="ncov2019@gov.in">ncov2019@gov.in (This website is project based assessment, not for commercial use)</a> </p></marquee>
+<br><marquee behavior="scroll" direction="left"><p style="color:black">Source of data: The Indian council of medical research and Worldometer
+Helpline Number :+91-11-23978046, Toll Free : 1075, Helpline Email ID :<a href="ncov2019@gov.in">ncov2019@gov.in</a>  (This website is project based assessment, not for commercial use)</p></marquee>
 
 <!-- First Parallax Image with Logo Text -->
 <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
   <div class="w3-display-middle" style="white-space:nowrap;">
    <br> <br> <br> <br> <br> <br> <br> <br> <br><br> <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity"> WELCOME TO COINFO </span> </br>
-  
+
  </div>
 </div>
 
@@ -64,7 +64,7 @@ Helpline Number :+91-11-23978046, Toll Free : 1075, Helpline Email ID :<a href="
  CORONAVIRUS PANDEMIC (COVID-19)</h2></b>
 </div>
 
- 
+
 <h5 class="w3-center">About COVID-19: Corona viruses are a large family of viruses which may cause illness in animals or humans. In humans, several coronaviruses are known to cause respiratory infections ranging from the common cold to more severe diseases such as Middle East Respiratory Syndrome (MERS) and Severe Acute Respiratory Syndrome (SARS). The most recently discovered coronavirus causes coronavirus disease COVID-19. </h5>
 <br><br><h5 class="w3-center w3-text-black"><em><u>"Click below button in order to get COVID-19 update. It will redirect you to government website of India."</u></em></h5>
 
@@ -102,7 +102,7 @@ Helpline Number :+91-11-23978046, Toll Free : 1075, Helpline Email ID :<a href="
         -o-animation: glowing 1300ms infinite;
         animation: glowing 1300ms infinite;
       }
-      
+
       @keyframes glowing {
         0% {
           background-color: #2ba805;
@@ -117,15 +117,15 @@ Helpline Number :+91-11-23978046, Toll Free : 1075, Helpline Email ID :<a href="
           box-shadow: 0 0 5px #2ba805;
         }
       }
-     
+
     </style>
   </head>
   <body>
     <div class="w3-center w3-padding-64">
       <a class="button" href="{%url 'state'%}">COVID-19 STATEWISE STATUS</a>
 <a class="button" href="{%url 'tests'%}">ICMR TESTING LABS</a><br><br>
- <a class="button" href="https://www.worldometers.info/coronavirus/">WORLDWIDE DATA</a>
- <a class="button" href="https://www.mohfw.gov.in/covid_vaccination/vaccination/index.html#:~:text=12%20April%202021,19%20disease%20for%20priority%20vaccination">VACCINATION DRIVE</a>    
+ <a class="button" href="{%url 'world'%}">WORLDWIDE DATA</a>
+ <a class="button" href="https://www.mohfw.gov.in/covid_vaccination/vaccination/index.html#:~:text=12%20April%202021,19%20disease%20for%20priority%20vaccination">VACCINATION DRIVE</a>
     </div>
   </body>
 </html>
@@ -178,7 +178,7 @@ Helpline Number :+91-11-23978046, Toll Free : 1075, Helpline Email ID :<a href="
   </div>
   <div class="w3-quarter w3-section">
     <span class="w3-xlarge">2</span><br>
-     Tested by	
+     Tested by
   </div>
   </div>
 </div>
@@ -190,7 +190,7 @@ Helpline Number :+91-11-23978046, Toll Free : 1075, Helpline Email ID :<a href="
   <h2 class="w3-center w3-text-black">WHERE WE WORK</h2>
   <h5 class="w3-center"><em>I'd love your feedback!</em></h5>
 
-  
+
 <div class="w3-row w3-padding-32 w3-section">
     <div class="w3-col m4 w3-container">
       <img src="https://i.ytimg.com/vi/LkkYaPbpQkg/hqdefault.jpg" class="w3-image w3-round" style="width:150%">
@@ -206,11 +206,11 @@ Helpline Number :+91-11-23978046, Toll Free : 1075, Helpline Email ID :<a href="
 </div>
       <h5>Swing by for a cup of <i style="color:brown;" class="fa fa-coffee"></i>, or leave me a note:</h5>
         <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
-    
+
         <button class="w3-button w3-black w3-right w3-section" type="submit">
-          
+
 <a href="https://drive.google.com/open?id=1RXC0Mr3NkvgClG1czVZszyiNQ06S_7iBv71Pn2RUWS8" target="_blank">
-<i class="fa fa-paper-plane"></i> FEEDBACK US </a> 
+<i class="fa fa-paper-plane"></i> FEEDBACK US </a>
         </button>
       </form>
     </div>
@@ -219,21 +219,19 @@ Helpline Number :+91-11-23978046, Toll Free : 1075, Helpline Email ID :<a href="
 </div>
 
 
-
-        <div class="card" style="padding: 300px;
+        <div class="card" style="padding: 350px;
     background-color: #eee;
     padding-bottom: 50px;
     padding-top: 50px">
             <div class="text-center"> <img src="https://i.imgur.com/Dh7U4bp.png" width="200">Subscribe to our newsletter in order not to miss new updates</span>
-                <div class="text-center">
-                  <form name="form1" > 
-                <div class="mx-5">  <input type="text" id="email" name="text1" class="form-control" placeholder="Enter your e-mail" style="width: 75%; min-height: calc(1.5em + .75rem + 2px); padding: .575rem .75rem; font-size: 1rem;font-weight: 400;">
-<input class="btn btn-success border-rad" name ="submit" type="submit" value= "Subscribe" id="button-addon2" style="border-top-right-radius: 28px; border-bottom-right-radius: 28px; color: #fff; background-color: #f9a826; border-color: #f9a826" onclick="ValidateEmail(document.form1.text1)"></input>
-             </div>
+                <div class="mx-5">
+                  <form name="form1" >
+                  <input type="text" id="email" name="text1" class="form-control" placeholder="Enter your e-mail" style="width: 75%; min-height: calc(1.5em + .75rem + 2px); padding: .575rem .75rem; font-size: 1rem;font-weight: 400;">
+<input class="btn btn-success border-rad" name ="submit" type="submit" value= "Subscribe" id="button-addon2" style="border-top-right-radius: 28px; border-bottom-right-radius: 28px; color: #fff;
+    background-color: #f9a826; border-color: #f9a826" onclick="ValidateEmail(document.form1.text1)"></input>
               </form>
+            </div></div>
             </div>
-            </div>
-          </div>
   <script>
  function ValidateEmail(inputText)
 {
@@ -270,9 +268,9 @@ return false;
 <li><a title="Swachhbharat" alt="Swachhbharat" href="https://swachhbharat.mygov.in/" ><img title="Swachhbharat" alt="Swachhbharat" src="https://www.mygov.in/footer_service/images/swachh-bharat.png"></a></li>
 
 <li><a title="MyGov Blog" alt="MyGov Blog" href="https://blog.mygov.in" ><img alt="" src="https://www.mygov.in/footer_service/images/blog-logo.png"></a></li><li><a title="Self4Society" alt="Self4Society" href="https://self4society.mygov.in" ><img alt="Self4Society Logo" src="https://www.mygov.in/footer_service/images/itowe-logo.png"></a></li>
- 
- 
- 
+
+
+
  </div></ul> </div>
 <script src="https://chat.amplify.ai/plugin/5e844c8225fa4f415700f107/chat_plugin.js?pluginId=5e844c8225fa4f415700f107"></script>
 
@@ -282,13 +280,13 @@ return false;
   <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
   <div class="w3-xlarge w3-section">
 
-    <a href="https://www.facebook.com/arjun07s" ><i class="fa fa-facebook-official w3-hover-opacity"></i></a>	
-    <a href="https://www.instagram.com/arjun_07s/" ><i class="fa fa-instagram w3-hover-opacity"></i></a>	
-    <a href="https://www.snapchat.com/add/arjun_07s" ><i class="fa fa-snapchat w3-hover-opacity"></i></a>	
-    <a href="https://in.pinterest.com/Random_071/" ><i class="fa fa-pinterest-p w3-hover-opacity"></i></a>	
+    <a href="https://www.facebook.com/arjun07s" ><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
+    <a href="https://www.instagram.com/arjun_07s/" ><i class="fa fa-instagram w3-hover-opacity"></i></a>
+    <a href="https://www.snapchat.com/add/arjun_07s" ><i class="fa fa-snapchat w3-hover-opacity"></i></a>
+    <a href="https://in.pinterest.com/Random_071/" ><i class="fa fa-pinterest-p w3-hover-opacity"></i></a>
     <a href="https://twitter.com/arjun_07s" ><i class="fa fa-twitter w3-hover-opacity"></i></a>
     <a href="https://www.linkedin.com/in/arjun-singh-76491a1a81" ><i class="fa fa-linkedin w3-hover-opacity"></i></a>
-    
+
 
 <div>
 <!-- Start of WebCounter Code -->
@@ -297,14 +295,14 @@ return false;
 </div>
 
  </div>
-<p>All <i class="fa fa-registered"></i> rights reserved: Legal information is not legal advice, 
-RESPECT for the intellectual work of others has traditionally been essential to the mission of colleges and universities. 
-As members of the academic community, we value the free exchange of ideas. Just as we do not tolerate plagiarism, 
+<p>All <i class="fa fa-registered"></i> rights reserved: Legal information is not legal advice,
+RESPECT for the intellectual work of others has traditionally been essential to the mission of colleges and universities.
+As members of the academic community, we value the free exchange of ideas. Just as we do not tolerate plagiarism,
 we do not condone the unauthorized copying of software, including programs, applications, data bases and code. (This is a test website)
-<br></i>Content owned, updated and maintained by the Coinfo. 
+<br></i>Content owned, updated and maintained by the Coinfo.
 <p><i class="fa fa-copyright"></i>Copyright Coinfo Informatics Centre 2021, (Section 31(1)(b))</p>
 
-<marquee><p>Last update: 27th Aug 2021 by CoInfo Informatics Centres, Indore. (Soon will be available in Android app)<p></marquee>
+<marquee><p>Last update: 27th Sept 2021 by CoInfo Informatics Centres, Indore. (Soon will be available in Android app)<p></marquee>
 
   </footer>
 

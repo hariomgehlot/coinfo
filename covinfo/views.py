@@ -1,5 +1,5 @@
 from django.shortcuts import render
-import matplotlib as mpl 
+import matplotlib as mpl
 import matplotlib.pyplot as plt
 import mpld3
 import requests
@@ -51,9 +51,9 @@ def statewise(request):
      plt.ylabel('Active cases')
      plt.title("Active Cases Statewise")
      plt.xticks(rotation =90)
-    
 
-     
+
+
      cX = plt.figure(figsize=(12,5))
      plt.bar(states, confirmed_X)
      plt.xlabel('States')
@@ -86,3 +86,6 @@ def statewise(request):
 
 def tests(request):
      return render(request,"tests.html")
+
+def world(request):
+     return render(request,"world.html")
