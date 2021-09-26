@@ -2,8 +2,9 @@
 <title>CoInfo</title>
 <meta charset="UTF-8">
 <head>
+  <link rel="icon" href="https://freepngimg.com/download/virus/4-2-virus-png-picture.png" type="image/x-icon">
 <meta name="description" content="All informtion you need to know about CORONAVIRUS PANDEMIC (COVID-19), find out More here." /> 
-</head>
+
 
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
@@ -17,6 +18,7 @@ body, html {
   line-height: 1.8;
 }
 </style>
+</head>
 <body>
 
 <!-- Navbar (sit on top) -->
@@ -25,10 +27,10 @@ body, html {
     <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle       Navigation Menu">
       <i class="fa fa-bars"></i>
     </a>
-    <a href="{%url 'index'%}" class="w3-bar-item w3-button w3-hover-green">HOME</a>
-    <a href="{%url 'index'%}" class="w3-bar-item w3-button"><i class="fa fa-address-card"></i> ABOUT</a>
-    <a href="{%url 'index'%}" class="w3-bar-item w3-button"><i class="fa fa-th"></i> COVID-19</a>
-    <a href="{%url 'index'%}" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACT</a>
+    <a href="{%url 'index'%}#home" class="w3-bar-item w3-button w3-hover-green">HOME</a>
+    <a href="{%url 'index'%}#about" class="w3-bar-item w3-button"><i class="fa fa-address-card"></i> ABOUT</a>
+    <a href="{%url 'index'%}#covid-19" class="w3-bar-item w3-button"><i class="fa fa-th"></i> COVID-19</a>
+    <a href="{%url 'index'%}#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACT</a>
     <a href="https://www.mohfw.gov.in/pdf/AAROGYASETUIVRS1921.pdf" class="w3-bar-item w3-button w3-hide-small w3-hover-red">Aarogya Setu IVRS <i class="fa fa-phone" aria-hidden="true"></i> 1921</a>
     <a href="https://www.mygov.in/covid-19/?cbps=1&target=webview&type=campaign&nid=0" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red"><i class="fa fa-search"></i> COVID-19</a>
     <a href="https://www.icmr.gov.in/ctestlab.html" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red" onclick="toggleFunction()">TESTING LABS</a>
@@ -36,9 +38,9 @@ body, html {
 
   <!-- Navbar on small screens -->
   <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
-    <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
-    <a href="#covid-19" class="w3-bar-item w3-button" onclick="toggleFunction()">COVID-19</a>
-    <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
+    <a href="{%url 'index'%}#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
+    <a href="{%url 'index'%}#covid-19" class="w3-bar-item w3-button" onclick="toggleFunction()">COVID-19</a>
+    <a href="{%url 'index'%}#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
     <a href="https://www.mygov.in/covid-19/?cbps=1&target=webview&type=campaign&nid=0" class="w3-bar-item w3-button">Aarogya Setu IVRS</a>
   </div>
 </div>

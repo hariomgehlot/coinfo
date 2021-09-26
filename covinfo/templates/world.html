@@ -1,0 +1,3852 @@
+{%extends 'base.html'%}
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+{%block subtitle%} : COVID-19 Weekly Trends by Country {%endblock%}
+
+{%block body_ %}
+
+
+<div class="row">
+<div class="col-md-8">
+<div id="weekly_table"></div>
+<h3 id="countries">Weekly Trends</h3>
+
+</nav></div></div></div><table id="main_table_countries_today" class="table table-bordered table-hover main_table_countries dataTable no-footer" style="width: 100%; margin-top: 0px !important;">
+<thead>
+<tr role="row"><th width="1%" class="sorting_disabled" rowspan="1" colspan="1" aria-label="#" style="width: 14px;">#</th><th width="100" class="sorting" tabindex="0" aria-controls="main_table_countries_today" rowspan="1" colspan="1" aria-label="Country,Other: activate to sort column ascending" style="width: 100px;">Country,<br>Other</th><th width="30" class="sorting_desc" tabindex="0" aria-controls="main_table_countries_today" rowspan="1" colspan="1" aria-label="Cases in the last 7 days: activate to sort column ascending" style="width: 47px;" aria-sort="descending">Cases in the last 7 days</th><th width="30" class="sorting" tabindex="0" aria-controls="main_table_countries_today" rowspan="1" colspan="1" aria-label="Cases in the preceding 7 days: activate to sort column descending" style="width: 67px;">Cases in the preceding 7 days</th><th width="30" class="sorting" tabindex="0" aria-controls="main_table_countries_today" rowspan="1" colspan="1" aria-label="Weekly Case % Change: activate to sort column descending" style="width: 86px;"><nobr>Weekly Case</nobr> <nobr>% Change</nobr></th><th width="30" class="sorting" tabindex="0" aria-controls="main_table_countries_today" rowspan="1" colspan="1" aria-label="Cases in the last 7 days/1M pop: activate to sort column descending" style="width: 67px;">Cases in the last <nobr>7 days</nobr>/1M pop</th><th width="30" class="sorting" tabindex="0" aria-controls="main_table_countries_today" rowspan="1" colspan="1" aria-label="Deaths in the last 7 days: activate to sort column descending" style="width: 47px;">Deaths in the last <nobr>7 days</nobr></th><th width="30" class="sorting" tabindex="0" aria-controls="main_table_countries_today" rowspan="1" colspan="1" aria-label="Deaths in the preceding 7 days: activate to sort column descending" style="width: 67px;">Deaths in the preceding <nobr>7 days</nobr></th><th width="30" class="sorting" tabindex="0" aria-controls="main_table_countries_today" rowspan="1" colspan="1" aria-label="Weekly Death % Change: activate to sort column descending" style="width: 91px;"><nobr>Weekly Death</nobr> <nobr>% Change</nobr></th><th width="30" class="sorting" tabindex="0" aria-controls="main_table_countries_today" rowspan="1" colspan="1" aria-label="Deaths in the last 7 days/1M pop: activate to sort column descending" style="width: 56px;">Deaths in the last 7 days/1M pop</th><th width="30" class="sorting" tabindex="0" aria-controls="main_table_countries_today" rowspan="1" colspan="1" aria-label="Population: activate to sort column descending" style="width: 78px;">Population</th><th style="display: none; width: 0px;" width="30" class="sorting" tabindex="0" aria-controls="main_table_countries_today" rowspan="1" colspan="1" aria-label="Continent: activate to sort column descending">Continent</th></tr>
+</thead>
+<tbody>
+
+
+
+
+<tr class="total_row_world odd" role="row">
+<td></td>
+<td style="text-align:left;">World</td>
+<td class="sorting_1">3,264,577</td>
+<td>3,690,308</td>
+<td>-12%</td>
+<td></td>
+<td>53,918</td>
+<td>60,050</td>
+<td>-10%</td>
+<td></td>
+
+
+
+
+<td></td>
+<td style="display:none" data-continent="all">All</td>
+</tr><tr class="total_row_world row_continent even" data-continent="Asia" style="display: none" role="row">
+<td></td>
+<td style="text-align:left;">
+<nobr>Asia</nobr>
+</td>
+<td class="sorting_1">1,174,719</td>
+<td>1,331,030</td>
+<td>-12%</td>
+<td></td>
+<td>16,474</td>
+<td>20,680</td>
+<td>
+-20% </td>
+<td></td>
+
+
+
+
+<td></td>
+<td style="display:none;" data-continent="Asia">Asia</td>
+</tr><tr class="total_row_world row_continent odd" data-continent="North America" style="display: none" role="row">
+<td></td>
+<td style="text-align:left;">
+<nobr>North America</nobr>
+</td>
+<td class="sorting_1">985,687</td>
+<td>1,227,748</td>
+<td>-20%</td>
+<td></td>
+<td>17,304</td>
+ <td>18,118</td>
+<td>
+-4% </td>
+<td></td>
+
+
+
+
+<td></td>
+<td style="display:none;" data-continent="North America">North America</td>
+</tr><tr class="total_row_world row_continent even" data-continent="Europe" style="display: none" role="row">
+<td></td>
+<td style="text-align:left;">
+<nobr>Europe</nobr>
+</td>
+<td class="sorting_1">828,955</td>
+<td>813,157</td>
+<td>+2%</td>
+<td></td>
+<td>12,144</td>
+<td>11,661</td>
+<td>
++4% </td>
+<td></td>
+
+
+
+
+<td></td>
+<td style="display:none;" data-continent="Europe">Europe</td>
+</tr><tr style="" role="row" class="odd">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">1</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/us/">USA</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">779,832</td>
+<td style="font-weight: bold; text-align:right">1,017,110</td>
+<td style="font-weight: bold; text-align:right">-23%</td>
+<td style="font-weight: bold; text-align:right">2,339</td>
+<td style="font-weight: bold; text-align:right">11,268</td>
+<td style="font-weight: bold; text-align:right">12,508</td>
+<td style="font-weight: bold; text-align:right">-10%</td>
+<td style="font-weight: bold; text-align:right">34</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">333,394,863</td>
+<td style="display:none" data-continent="North America">North America</td>
+</tr><tr style="" role="row" class="even">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">2</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/uk/">UK</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">231,520</td>
+<td style="font-weight: bold; text-align:right">203,096</td>
+<td style="font-weight: bold; text-align:right">+14%</td>
+<td style="font-weight: bold; text-align:right">3,388</td>
+<td style="font-weight: bold; text-align:right">958</td>
+<td style="font-weight: bold; text-align:right">1,003</td>
+<td style="font-weight: bold; text-align:right">-4%</td>
+<td style="font-weight: bold; text-align:right">14</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">68,325,553</td>
+<td style="display:none" data-continent="Europe">Europe</td>
+</tr><tr style="" role="row" class="odd">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">3</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/india/">India</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">204,211</td>
+<td style="font-weight: bold; text-align:right">214,842</td>
+<td style="font-weight: bold; text-align:right">-5%</td>
+<td style="font-weight: bold; text-align:right">146</td>
+<td style="font-weight: bold; text-align:right">2,079</td>
+<td style="font-weight: bold; text-align:right">2,181</td>
+<td style="font-weight: bold; text-align:right">-5%</td>
+<td style="font-weight: bold; text-align:right">1</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">1,396,716,723</td>
+<td style="display:none" data-continent="Asia">Asia</td>
+</tr><tr style="" role="row" class="even">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">4</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/turkey/">Turkey</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">192,778</td>
+<td style="font-weight: bold; text-align:right">183,962</td>
+<td style="font-weight: bold; text-align:right">+5%</td>
+<td style="font-weight: bold; text-align:right">2,256</td>
+<td style="font-weight: bold; text-align:right">1,577</td>
+ <td style="font-weight: bold; text-align:right">1,718</td>
+<td style="font-weight: bold; text-align:right">-8%</td>
+<td style="font-weight: bold; text-align:right">18</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">85,456,785</td>
+<td style="display:none" data-continent="Asia">Asia</td>
+</tr><tr class="total_row_world row_continent odd" data-continent="South America" style="display: none" role="row">
+<td></td>
+<td style="text-align:left;">
+<nobr>South America</nobr>
+</td>
+<td class="sorting_1">176,067</td>
+<td>191,007</td>
+<td>-8%</td>
+<td></td>
+<td>5,109</td>
+<td>6,139</td>
+<td>
+-17% </td>
+<td></td>
+
+
+
+
+
+<td></td>
+<td style="display:none;" data-continent="South America">South America</td>
+</tr><tr style="" role="row" class="even">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">5</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/russia/">Russia</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">143,661</td>
+<td style="font-weight: bold; text-align:right">133,238</td>
+<td style="font-weight: bold; text-align:right">+8%</td>
+<td style="font-weight: bold; text-align:right">984</td>
+<td style="font-weight: bold; text-align:right">5,670</td>
+<td style="font-weight: bold; text-align:right">5,464</td>
+<td style="font-weight: bold; text-align:right">+4%</td>
+<td style="font-weight: bold; text-align:right">39</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">146,011,636</td>
+<td style="display:none" data-continent="Europe">Europe</td>
+</tr><tr style="" role="row" class="odd">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">6</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/brazil/">Brazil</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">126,123</td>
+<td style="font-weight: bold; text-align:right">136,642</td>
+<td style="font-weight: bold; text-align:right">-8%</td>
+<td style="font-weight: bold; text-align:right">588</td>
+ <td style="font-weight: bold; text-align:right">3,699</td>
+<td style="font-weight: bold; text-align:right">3,957</td>
+<td style="font-weight: bold; text-align:right">-7%</td>
+<td style="font-weight: bold; text-align:right">17</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">214,421,321</td>
+<td style="display:none" data-continent="South America">South America</td>
+</tr><tr style="" role="row" class="even">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">7</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/philippines/">Philippines</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">122,625</td>
+<td style="font-weight: bold; text-align:right">141,552</td>
+<td style="font-weight: bold; text-align:right">-13%</td>
+<td style="font-weight: bold; text-align:right">1,101</td>
+<td style="font-weight: bold; text-align:right">822</td>
+<td style="font-weight: bold; text-align:right">1,606</td>
+<td style="font-weight: bold; text-align:right">-49%</td>
+<td style="font-weight: bold; text-align:right">7</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">111,376,648</td>
+<td style="display:none" data-continent="Asia">Asia</td>
+ </tr><tr style="" role="row" class="odd">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">8</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/iran/">Iran</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">110,868</td>
+<td style="font-weight: bold; text-align:right">133,293</td>
+<td style="font-weight: bold; text-align:right">-17%</td>
+<td style="font-weight: bold; text-align:right">1,299</td>
+<td style="font-weight: bold; text-align:right">2,281</td>
+<td style="font-weight: bold; text-align:right">2,967</td>
+<td style="font-weight: bold; text-align:right">-23%</td>
+<td style="font-weight: bold; text-align:right">27</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">85,316,587</td>
+<td style="display:none" data-continent="Asia">Asia</td>
+</tr><tr style="" role="row" class="even">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">9</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/malaysia/">Malaysia</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">102,255</td>
+<td style="font-weight: bold; text-align:right">122,376</td>
+<td style="font-weight: bold; text-align:right">-16%</td>
+<td style="font-weight: bold; text-align:right">3,110</td>
+<td style="font-weight: bold; text-align:right">2,092</td>
+<td style="font-weight: bold; text-align:right">2,648</td>
+<td style="font-weight: bold; text-align:right">-21%</td>
+<td style="font-weight: bold; text-align:right">64</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">32,876,563</td>
+<td style="display:none" data-continent="Asia">Asia</td>
+</tr><tr style="" role="row" class="odd">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">10</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/thailand/">Thailand</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">86,384</td>
+<td style="font-weight: bold; text-align:right">94,757</td>
+
+<td style="font-weight: bold; text-align:right">-9%</td>
+<td style="font-weight: bold; text-align:right">1,234</td>
+<td style="font-weight: bold; text-align:right">897</td>
+<td style="font-weight: bold; text-align:right">1,073</td>
+<td style="font-weight: bold; text-align:right">-16%</td>
+<td style="font-weight: bold; text-align:right">13</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">70,015,933</td>
+<td style="display:none" data-continent="Asia">Asia</td>
+</tr><tr class="total_row_world row_continent even" data-continent="Africa" style="display: none" role="row">
+<td></td>
+<td style="text-align:left;">
+<nobr>Africa</nobr>
+</td>
+<td class="sorting_1">83,159</td>
+<td>110,931</td>
+<td>-25%</td>
+<td></td>
+<td>2,705</td>
+<td>3,292</td>
+<td>
+-18% </td>
+<td></td>
+
+
+
+
+<td></td>
+<td style="display:none;" data-continent="Africa">Africa</td>
+</tr><tr style="" role="row" class="odd">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">11</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/viet-nam/">Vietnam</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">69,655</td>
+<td style="font-weight: bold; text-align:right">75,674</td>
+<td style="font-weight: bold; text-align:right">-8%</td>
+<td style="font-weight: bold; text-align:right">708</td>
+<td style="font-weight: bold; text-align:right">1,543</td>
+<td style="font-weight: bold; text-align:right">1,839</td>
+<td style="font-weight: bold; text-align:right">-16%</td>
+<td style="font-weight: bold; text-align:right">16</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">98,417,520</td>
+<td style="display:none" data-continent="Asia">Asia</td>
+</tr><tr style="" role="row" class="even">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">12</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/mexico/">Mexico</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">66,132</td>
+<td style="font-weight: bold; text-align:right">58,751</td>
+<td style="font-weight: bold; text-align:right">+13%</td>
+<td style="font-weight: bold; text-align:right">506</td>
+<td style="font-weight: bold; text-align:right">4,165</td>
+<td style="font-weight: bold; text-align:right">3,689</td>
+<td style="font-weight: bold; text-align:right">+13%</td>
+<td style="font-weight: bold; text-align:right">32</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">130,601,176</td>
+<td style="display:none" data-continent="North America">North America</td>
+</tr><tr style="" role="row" class="odd">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">13</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/germany/">Germany</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">54,862</td>
+<td style="font-weight: bold; text-align:right">65,982</td>
+<td style="font-weight: bold; text-align:right">-17%</td>
+<td style="font-weight: bold; text-align:right">652</td>
+<td style="font-weight: bold; text-align:right">411</td>
+<td style="font-weight: bold; text-align:right">437</td>
+<td style="font-weight: bold; text-align:right">-6%</td>
+<td style="font-weight: bold; text-align:right">5</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">84,114,236</td>
+<td style="display:none" data-continent="Europe">Europe</td>
+</tr><tr style="" role="row" class="even">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">14</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/cuba/">Cuba</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">54,561</td>
+<td style="font-weight: bold; text-align:right">55,765</td>
+<td style="font-weight: bold; text-align:right">-2%</td>
+ <td style="font-weight: bold; text-align:right">4,821</td>
+<td style="font-weight: bold; text-align:right">430</td>
+<td style="font-weight: bold; text-align:right">514</td>
+<td style="font-weight: bold; text-align:right">-16%</td>
+<td style="font-weight: bold; text-align:right">38</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">11,318,089</td>
+<td style="display:none" data-continent="North America">North America</td>
+</tr><tr style="" role="row" class="odd">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">15</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/serbia/">Serbia</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">45,246</td>
+<td style="font-weight: bold; text-align:right">48,522</td>
+<td style="font-weight: bold; text-align:right">-7%</td>
+<td style="font-weight: bold; text-align:right">5,204</td>
+<td style="font-weight: bold; text-align:right">275</td>
+<td style="font-weight: bold; text-align:right">213</td>
+<td style="font-weight: bold; text-align:right">+29%</td>
+<td style="font-weight: bold; text-align:right">32</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">8,693,946</td>
+<td style="display:none" data-continent="Europe">Europe</td>
+</tr><tr style="" role="row" class="even">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">16</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/ukraine/">Ukraine</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">43,352</td>
+<td style="font-weight: bold; text-align:right">29,975</td>
+<td style="font-weight: bold; text-align:right">+45%</td>
+<td style="font-weight: bold; text-align:right">999</td>
+<td style="font-weight: bold; text-align:right">728</td>
+<td style="font-weight: bold; text-align:right">509</td>
+<td style="font-weight: bold; text-align:right">+43%</td>
+<td style="font-weight: bold; text-align:right">17</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">43,409,509</td>
+<td style="display:none" data-continent="Europe">Europe</td>
+</tr><tr style="" role="row" class="odd">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">17</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/romania/">Romania</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">42,880</td>
+<td style="font-weight: bold; text-align:right">26,344</td>
+<td style="font-weight: bold; text-align:right">+63%</td>
+<td style="font-weight: bold; text-align:right">2,247</td>
+<td style="font-weight: bold; text-align:right">774</td>
+<td style="font-weight: bold; text-align:right">493</td>
+<td style="font-weight: bold; text-align:right">+57%</td>
+<td style="font-weight: bold; text-align:right">41</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">19,079,305</td>
+<td style="display:none" data-continent="Europe">Europe</td>
+</tr><tr style="" role="row" class="even">
+ <td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">18</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/israel/">Israel</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">41,957</td>
+<td style="font-weight: bold; text-align:right">53,068</td>
+<td style="font-weight: bold; text-align:right">-21%</td>
+<td style="font-weight: bold; text-align:right">4,499</td>
+<td style="font-weight: bold; text-align:right">138</td>
+<td style="font-weight: bold; text-align:right">173</td>
+<td style="font-weight: bold; text-align:right">-20%</td>
+<td style="font-weight: bold; text-align:right">15</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">9,326,000</td>
+<td style="display:none" data-continent="Asia">Asia</td>
+</tr><tr style="" role="row" class="odd">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">19</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/france/">France</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">40,094</td>
+<td style="font-weight: bold; text-align:right">52,127</td>
+<td style="font-weight: bold; text-align:right">-23%</td>
+<td style="font-weight: bold; text-align:right">613</td>
+<td style="font-weight: bold; text-align:right">447</td>
+<td style="font-weight: bold; text-align:right">514</td>
+<td style="font-weight: bold; text-align:right">-13%</td>
+<td style="font-weight: bold; text-align:right">7</td>
+
+
+
+
+
+<td style="font-weight: bold; text-align:right">65,451,605</td>
+<td style="display:none" data-continent="Europe">Europe</td>
+</tr><tr style="" role="row" class="even">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">20</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/canada/">Canada</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">27,179</td>
+<td style="font-weight: bold; text-align:right">33,405</td>
+<td style="font-weight: bold; text-align:right">-19%</td>
+<td style="font-weight: bold; text-align:right">712</td>
+<td style="font-weight: bold; text-align:right">256</td>
+<td style="font-weight: bold; text-align:right">195</td>
+<td style="font-weight: bold; text-align:right">+31%</td>
+<td style="font-weight: bold; text-align:right">7</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">38,149,834</td>
+<td style="display:none" data-continent="North America">North America</td>
+</tr><tr style="" role="row" class="odd">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">21</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/italy/">Italy</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">24,942</td>
+<td style="font-weight: bold; text-align:right">30,524</td>
+<td style="font-weight: bold; text-align:right">-18%</td>
+<td style="font-weight: bold; text-align:right">413</td>
+ <td style="font-weight: bold; text-align:right">363</td>
+<td style="font-weight: bold; text-align:right">381</td>
+<td style="font-weight: bold; text-align:right">-5%</td>
+<td style="font-weight: bold; text-align:right">6</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">60,352,157</td>
+<td style="display:none" data-continent="Europe">Europe</td>
+</tr><tr style="" role="row" class="even">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">22</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/japan/">Japan</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">21,271</td>
+<td style="font-weight: bold; text-align:right">45,158</td>
+<td style="font-weight: bold; text-align:right">-53%</td>
+<td style="font-weight: bold; text-align:right">169</td>
+<td style="font-weight: bold; text-align:right">324</td>
+<td style="font-weight: bold; text-align:right">407</td>
+<td style="font-weight: bold; text-align:right">-20%</td>
+<td style="font-weight: bold; text-align:right">3</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">125,998,778</td>
+<td style="display:none" data-continent="Asia">Asia</td>
+</tr><tr style="" role="row" class="odd">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">23</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/mongolia/">Mongolia</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">20,222</td>
+<td style="font-weight: bold; text-align:right">19,721</td>
+<td style="font-weight: bold; text-align:right">+3%</td>
+<td style="font-weight: bold; text-align:right">6,049</td>
+<td style="font-weight: bold; text-align:right">93</td>
+<td style="font-weight: bold; text-align:right">75</td>
+<td style="font-weight: bold; text-align:right">+24%</td>
+
+<td style="font-weight: bold; text-align:right">28</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">3,343,254</td>
+<td style="display:none" data-continent="Asia">Asia</td>
+</tr><tr style="" role="row" class="even">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">24</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/guatemala/">Guatemala</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">20,016</td>
+<td style="font-weight: bold; text-align:right">18,934</td>
+<td style="font-weight: bold; text-align:right">+6%</td>
+<td style="font-weight: bold; text-align:right">1,092</td>
+<td style="font-weight: bold; text-align:right">332</td>
+<td style="font-weight: bold; text-align:right">334</td>
+<td style="font-weight: bold; text-align:right">-1%</td>
+<td style="font-weight: bold; text-align:right">18</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">18,323,207</td>
+<td style="display:none" data-continent="North America">North America</td>
+</tr><tr style="" role="row" class="odd">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">25</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/iraq/">Iraq</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">18,923</td>
+<td style="font-weight: bold; text-align:right">25,494</td>
+<td style="font-weight: bold; text-align:right">-26%</td>
+<td style="font-weight: bold; text-align:right">458</td>
+<td style="font-weight: bold; text-align:right">297</td>
+<td style="font-weight: bold; text-align:right">330</td>
+<td style="font-weight: bold; text-align:right">-10%</td>
+<td style="font-weight: bold; text-align:right">7</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">41,331,932</td>
+<td style="display:none" data-continent="Asia">Asia</td>
+</tr><tr style="" role="row" class="even">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">26</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/indonesia/">Indonesia</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">17,724</td>
+<td style="font-weight: bold; text-align:right">24,797</td>
+<td style="font-weight: bold; text-align:right">-29%</td>
+<td style="font-weight: bold; text-align:right">64</td>
+<td style="font-weight: bold; text-align:right">1,058</td>
+<td style="font-weight: bold; text-align:right">1,622</td>
+<td style="font-weight: bold; text-align:right">-35%</td>
+<td style="font-weight: bold; text-align:right">4</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">277,085,934</td>
+<td style="display:none" data-continent="Asia">Asia</td>
+</tr><tr style="" role="row" class="odd">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">27</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/kazakhstan/">Kazakhstan</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">17,277</td>
+<td style="font-weight: bold; text-align:right">21,719</td>
+<td style="font-weight: bold; text-align:right">-20%</td>
+<td style="font-weight: bold; text-align:right">907</td>
+<td style="font-weight: bold; text-align:right">329</td>
+<td style="font-weight: bold; text-align:right">432</td>
+<td style="font-weight: bold; text-align:right">-24%</td>
+<td style="font-weight: bold; text-align:right">17</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">19,053,268</td>
+<td style="display:none" data-continent="Asia">Asia</td>
+</tr><tr class="total_row_world row_continent even" data-continent="Australia/Oceania" style="display: none" role="row">
+<td></td>
+<td style="text-align:left;">
+<nobr>Oceania</nobr>
+</td>
+<td class="sorting_1">15,990</td>
+<td>16,435</td>
+<td>-3%</td>
+<td></td>
+<td>182</td>
+<td>160</td>
+<td>
++14% </td>
+<td></td>
+
+
+
+
+<td></td>
+<td style="display:none;" data-continent="Australia/Oceania">Australia/Oceania</td>
+</tr><tr style="" role="row" class="odd">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">28</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/pakistan/">Pakistan</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">15,627</td>
+<td style="font-weight: bold; text-align:right">19,894</td>
+<td style="font-weight: bold; text-align:right">-21%</td>
+<td style="font-weight: bold; text-align:right">69</td>
+<td style="font-weight: bold; text-align:right">389</td>
+<td style="font-weight: bold; text-align:right">473</td>
+<td style="font-weight: bold; text-align:right">-18%</td>
+<td style="font-weight: bold; text-align:right">2</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">226,167,244</td>
+<td style="display:none" data-continent="Asia">Asia</td>
+</tr><tr style="" role="row" class="even">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">29</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/south-africa/">South Africa</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">15,627</td>
+<td style="font-weight: bold; text-align:right">26,115</td>
+<td style="font-weight: bold; text-align:right">-40%</td>
+<td style="font-weight: bold; text-align:right">259</td>
+<td style="font-weight: bold; text-align:right">885</td>
+<td style="font-weight: bold; text-align:right">1,365</td>
+<td style="font-weight: bold; text-align:right">-35%</td>
+<td style="font-weight: bold; text-align:right">15</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">60,229,378</td>
+<td style="display:none" data-continent="Africa">Africa</td>
+</tr><tr style="" role="row" class="odd">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">30</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/greece/">Greece</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">15,371</td>
+<td style="font-weight: bold; text-align:right">15,660</td>
+<td style="font-weight: bold; text-align:right">-2%</td>
+<td style="font-weight: bold; text-align:right">1,484</td>
+<td style="font-weight: bold; text-align:right">222</td>
+<td style="font-weight: bold; text-align:right">292</td>
+<td style="font-weight: bold; text-align:right">-24%</td>
+<td style="font-weight: bold; text-align:right">21</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">10,360,230</td>
+<td style="display:none" data-continent="Europe">Europe</td>
+</tr><tr style="" role="row" class="even">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">31</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/spain/">Spain</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">15,059</td>
+<td style="font-weight: bold; text-align:right">21,480</td>
+<td style="font-weight: bold; text-align:right">-30%</td>
+<td style="font-weight: bold; text-align:right">322</td>
+<td style="font-weight: bold; text-align:right">407</td>
+<td style="font-weight: bold; text-align:right">498</td>
+<td style="font-weight: bold; text-align:right">-18%</td>
+<td style="font-weight: bold; text-align:right">9</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">46,777,112</td>
+<td style="display:none" data-continent="Europe">Europe</td>
+</tr><tr style="" role="row" class="odd">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">32</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/south-korea/">S. Korea</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">14,380</td>
+<td style="font-weight: bold; text-align:right">12,795</td>
+<td style="font-weight: bold; text-align:right">+12%</td>
+<td style="font-weight: bold; text-align:right">280</td>
+<td style="font-weight: bold; text-align:right">47</td>
+<td style="font-weight: bold; text-align:right">36</td>
+<td style="font-weight: bold; text-align:right">+31%</td>
+<td style="font-weight: bold; text-align:right">0.9</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">51,323,599</td>
+<td style="display:none" data-continent="Asia">Asia</td>
+</tr><tr style="" role="row" class="even">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">33</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/belgium/">Belgium</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">13,909</td>
+<td style="font-weight: bold; text-align:right">14,298</td>
+<td style="font-weight: bold; text-align:right">-3%</td>
+<td style="font-weight: bold; text-align:right">1,194</td>
+<td style="font-weight: bold; text-align:right">57</td>
+<td style="font-weight: bold; text-align:right">43</td>
+<td style="font-weight: bold; text-align:right">+33%</td>
+<td style="font-weight: bold; text-align:right">5</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">11,651,800</td>
+<td style="display:none" data-continent="Europe">Europe</td>
+</tr><tr style="" role="row" class="odd">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">34</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/belarus/">Belarus</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">13,783</td>
+<td style="font-weight: bold; text-align:right">13,280</td>
+<td style="font-weight: bold; text-align:right">+4%</td>
+<td style="font-weight: bold; text-align:right">1,459</td>
+<td style="font-weight: bold; text-align:right">90</td>
+<td style="font-weight: bold; text-align:right">86</td>
+<td style="font-weight: bold; text-align:right">+5%</td>
+<td style="font-weight: bold; text-align:right">10</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">9,445,489</td>
+<td style="display:none" data-continent="Europe">Europe</td>
+</tr><tr style="" role="row" class="even">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">35</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/costa-rica/">Costa Rica</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">13,670</td>
+<td style="font-weight: bold; text-align:right">15,182</td>
+<td style="font-weight: bold; text-align:right">-10%</td>
+<td style="font-weight: bold; text-align:right">2,654</td>
+<td style="font-weight: bold; text-align:right">198</td>
+<td style="font-weight: bold; text-align:right">211</td>
+<td style="font-weight: bold; text-align:right">-6%</td>
+<td style="font-weight: bold; text-align:right">38</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">5,151,423</td>
+<td style="display:none" data-continent="North America">North America</td>
+</tr><tr style="" role="row" class="odd">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">36</td>
+ <td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/state-of-palestine/">Palestine</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">13,093</td>
+<td style="font-weight: bold; text-align:right">14,424</td>
+<td style="font-weight: bold; text-align:right">-9%</td>
+<td style="font-weight: bold; text-align:right">2,495</td>
+<td style="font-weight: bold; text-align:right">109</td>
+<td style="font-weight: bold; text-align:right">110</td>
+<td style="font-weight: bold; text-align:right">-1%</td>
+<td style="font-weight: bold; text-align:right">21</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">5,247,159</td>
+<td style="display:none" data-continent="Asia">Asia</td>
+</tr><tr style="" role="row" class="even">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">37</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/austria/">Austria</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">11,945</td>
+<td style="font-weight: bold; text-align:right">14,184</td>
+
+<td style="font-weight: bold; text-align:right">-16%</td>
+<td style="font-weight: bold; text-align:right">1,317</td>
+<td style="font-weight: bold; text-align:right">72</td>
+<td style="font-weight: bold; text-align:right">52</td>
+<td style="font-weight: bold; text-align:right">+38%</td>
+<td style="font-weight: bold; text-align:right">8</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">9,069,734</td>
+<td style="display:none" data-continent="Europe">Europe</td>
+</tr><tr style="" role="row" class="odd">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">38</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/australia/">Australia</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">11,751</td>
+<td style="font-weight: bold; text-align:right">12,101</td>
+<td style="font-weight: bold; text-align:right">-3%</td>
+<td style="font-weight: bold; text-align:right">454</td>
+<td style="font-weight: bold; text-align:right">72</td>
+<td style="font-weight: bold; text-align:right">64</td>
+<td style="font-weight: bold; text-align:right">+13%</td>
+<td style="font-weight: bold; text-align:right">3</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">25,864,227</td>
+<td style="display:none" data-continent="Australia/Oceania">Australia/Oceania</td>
+</tr><tr style="" role="row" class="even">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">39</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/myanmar/">Myanmar</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">11,749</td>
+<td style="font-weight: bold; text-align:right">14,991</td>
+<td style="font-weight: bold; text-align:right">-22%</td>
+<td style="font-weight: bold; text-align:right">214</td>
+<td style="font-weight: bold; text-align:right">449</td>
+<td style="font-weight: bold; text-align:right">565</td>
+<td style="font-weight: bold; text-align:right">-21%</td>
+<td style="font-weight: bold; text-align:right">8</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">54,859,297</td>
+<td style="display:none" data-continent="Asia">Asia</td>
+</tr><tr style="" role="row" class="odd">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">40</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/netherlands/">Netherlands</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">11,649</td>
+<td style="font-weight: bold; text-align:right">14,420</td>
+<td style="font-weight: bold; text-align:right">-19%</td>
+<td style="font-weight: bold; text-align:right">678</td>
+<td style="font-weight: bold; text-align:right">38</td>
+<td style="font-weight: bold; text-align:right">43</td>
+<td style="font-weight: bold; text-align:right">-12%</td>
+<td style="font-weight: bold; text-align:right">2</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">17,181,620</td>
+<td style="display:none" data-continent="Europe">Europe</td>
+</tr><tr style="" role="row" class="even">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">41</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/georgia/">Georgia</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">11,597</td>
+<td style="font-weight: bold; text-align:right">14,732</td>
+<td style="font-weight: bold; text-align:right">-21%</td>
+<td style="font-weight: bold; text-align:right">2,914</td>
+<td style="font-weight: bold; text-align:right">289</td>
+<td style="font-weight: bold; text-align:right">352</td>
+<td style="font-weight: bold; text-align:right">-18%</td>
+<td style="font-weight: bold; text-align:right">73</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">3,979,721</td>
+<td style="display:none" data-continent="Asia">Asia</td>
+</tr><tr style="" role="row" class="odd">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">42</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/argentina/">Argentina</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">11,230</td>
+<td style="font-weight: bold; text-align:right">15,006</td>
+<td style="font-weight: bold; text-align:right">-25%</td>
+<td style="font-weight: bold; text-align:right">246</td>
+<td style="font-weight: bold; text-align:right">482</td>
+<td style="font-weight: bold; text-align:right">1,011</td>
+<td style="font-weight: bold; text-align:right">-52%</td>
+<td style="font-weight: bold; text-align:right">11</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">45,706,676</td>
+<td style="display:none" data-continent="South America">South America</td>
+</tr><tr style="" role="row" class="even">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">43</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/colombia/">Colombia</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">11,002</td>
+<td style="font-weight: bold; text-align:right">10,673</td>
+<td style="font-weight: bold; text-align:right">+3%</td>
+<td style="font-weight: bold; text-align:right">213</td>
+<td style="font-weight: bold; text-align:right">242</td>
+<td style="font-weight: bold; text-align:right">268</td>
+<td style="font-weight: bold; text-align:right">-10%</td>
+<td style="font-weight: bold; text-align:right">5</td>
+
+ 
+
+
+<td style="font-weight: bold; text-align:right">51,550,853</td>
+<td style="display:none" data-continent="South America">South America</td>
+</tr><tr style="" role="row" class="odd">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">44</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/bulgaria/">Bulgaria</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">10,637</td>
+<td style="font-weight: bold; text-align:right">10,893</td>
+<td style="font-weight: bold; text-align:right">-2%</td>
+<td style="font-weight: bold; text-align:right">1,545</td>
+<td style="font-weight: bold; text-align:right">464</td>
+<td style="font-weight: bold; text-align:right">516</td>
+<td style="font-weight: bold; text-align:right">-10%</td>
+<td style="font-weight: bold; text-align:right">67</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">6,883,884</td>
+<td style="display:none" data-continent="Europe">Europe</td>
+</tr><tr style="" role="row" class="even">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">45</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/morocco/">Morocco</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">10,445</td>
+<td style="font-weight: bold; text-align:right">15,432</td>
+<td style="font-weight: bold; text-align:right">-32%</td>
+<td style="font-weight: bold; text-align:right">279</td>
+<td style="font-weight: bold; text-align:right">256</td>
+<td style="font-weight: bold; text-align:right">388</td>
+<td style="font-weight: bold; text-align:right">-34%</td>
+<td style="font-weight: bold; text-align:right">7</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">37,449,289</td>
+<td style="display:none" data-continent="Africa">Africa</td>
+</tr><tr style="" role="row" class="odd">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">46</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/switzerland/">Switzerland</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">10,309</td>
+<td style="font-weight: bold; text-align:right">15,024</td>
+<td style="font-weight: bold; text-align:right">-31%</td>
+<td style="font-weight: bold; text-align:right">1,181</td>
+<td style="font-weight: bold; text-align:right">36</td>
+<td style="font-weight: bold; text-align:right">38</td>
+<td style="font-weight: bold; text-align:right">-5%</td>
+<td style="font-weight: bold; text-align:right">4</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">8,732,612</td>
+<td style="display:none" data-continent="Europe">Europe</td>
+</tr><tr style="" role="row" class="even">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">47</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/sri-lanka/">Sri Lanka</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">9,773</td>
+<td style="font-weight: bold; text-align:right">19,478</td>
+<td style="font-weight: bold; text-align:right">-50%</td>
+<td style="font-weight: bold; text-align:right">454</td>
+<td style="font-weight: bold; text-align:right">587</td>
+<td style="font-weight: bold; text-align:right">870</td>
+<td style="font-weight: bold; text-align:right">-33%</td>
+<td style="font-weight: bold; text-align:right">27</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">21,523,928</td>
+<td style="display:none" data-continent="Asia">Asia</td>
+</tr><tr style="" role="row" class="odd">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">48</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/lithuania/">Lithuania</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">9,254</td>
+<td style="font-weight: bold; text-align:right">7,447</td>
+<td style="font-weight: bold; text-align:right">+24%</td>
+
+<td style="font-weight: bold; text-align:right">3,459</td>
+<td style="font-weight: bold; text-align:right">120</td>
+<td style="font-weight: bold; text-align:right">108</td>
+<td style="font-weight: bold; text-align:right">+11%</td>
+<td style="font-weight: bold; text-align:right">45</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">2,675,379</td>
+<td style="display:none" data-continent="Europe">Europe</td>
+</tr><tr style="" role="row" class="even">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">49</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/singapore/">Singapore</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">9,161</td>
+<td style="font-weight: bold; text-align:right">5,625</td>
+<td style="font-weight: bold; text-align:right">+63%</td>
+<td style="font-weight: bold; text-align:right">1,551</td>
+<td style="font-weight: bold; text-align:right">16</td>
+<td style="font-weight: bold; text-align:right">2</td>
+<td style="font-weight: bold; text-align:right">+700%</td>
+<td style="font-weight: bold; text-align:right">3</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">5,907,033</td>
+<td style="display:none" data-continent="Asia">Asia</td>
+</tr><tr style="" role="row" class="odd">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">50</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/ireland/">Ireland</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">9,075</td>
+<td style="font-weight: bold; text-align:right">8,830</td>
+<td style="font-weight: bold; text-align:right">+3%</td>
+<td style="font-weight: bold; text-align:right">1,813</td>
+<td style="font-weight: bold; text-align:right">30</td>
+<td style="font-weight: bold; text-align:right">24</td>
+<td style="font-weight: bold; text-align:right">+25%</td>
+<td style="font-weight: bold; text-align:right">6</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">5,005,713</td>
+<td style="display:none" data-continent="Europe">Europe</td>
+</tr><tr style="" role="row" class="even">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">51</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/bangladesh/">Bangladesh</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">9,071</td>
+<td style="font-weight: bold; text-align:right">12,758</td>
+<td style="font-weight: bold; text-align:right">-29%</td>
+<td style="font-weight: bold; text-align:right">54</td>
+<td style="font-weight: bold; text-align:right">211</td>
+<td style="font-weight: bold; text-align:right">302</td>
+<td style="font-weight: bold; text-align:right">-30%</td>
+<td style="font-weight: bold; text-align:right">1</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">166,710,396</td>
+<td style="display:none" data-continent="Asia">Asia</td>
+</tr><tr style="" role="row" class="odd">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">52</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/ethiopia/">Ethiopia</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">8,842</td>
+<td style="font-weight: bold; text-align:right">9,371</td>
+<td style="font-weight: bold; text-align:right">-6%</td>
+<td style="font-weight: bold; text-align:right">75</td>
+<td style="font-weight: bold; text-align:right">254</td>
+<td style="font-weight: bold; text-align:right">208</td>
+ <td style="font-weight: bold; text-align:right">+22%</td>
+<td style="font-weight: bold; text-align:right">2</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">118,462,390</td>
+<td style="display:none" data-continent="Africa">Africa</td>
+</tr><tr style="" role="row" class="even">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">53</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/azerbaijan/">Azerbaijan</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">8,829</td>
+<td style="font-weight: bold; text-align:right">13,569</td>
+<td style="font-weight: bold; text-align:right">-35%</td>
+<td style="font-weight: bold; text-align:right">861</td>
+<td style="font-weight: bold; text-align:right">153</td>
+<td style="font-weight: bold; text-align:right">215</td>
+<td style="font-weight: bold; text-align:right">-29%</td>
+<td style="font-weight: bold; text-align:right">15</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">10,251,762</td>
+<td style="display:none" data-continent="Asia">Asia</td>
+</tr><tr style="" role="row" class="odd">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">54</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/croatia/">Croatia</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">7,945</td>
+<td style="font-weight: bold; text-align:right">8,001</td>
+<td style="font-weight: bold; text-align:right">-0.7%</td>
+<td style="font-weight: bold; text-align:right">1,950</td>
+<td style="font-weight: bold; text-align:right">87</td>
+<td style="font-weight: bold; text-align:right">66</td>
+<td style="font-weight: bold; text-align:right">+32%</td>
+<td style="font-weight: bold; text-align:right">21</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">4,074,023</td>
+<td style="display:none" data-continent="Europe">Europe</td>
+</tr><tr style="" role="row" class="even">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">55</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/venezuela/">Venezuela</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">7,801</td>
+<td style="font-weight: bold; text-align:right">7,484</td>
+<td style="font-weight: bold; text-align:right">+4%</td>
+<td style="font-weight: bold; text-align:right">275</td>
+<td style="font-weight: bold; text-align:right">104</td>
+<td style="font-weight: bold; text-align:right">99</td>
+<td style="font-weight: bold; text-align:right">+5%</td>
+<td style="font-weight: bold; text-align:right">4</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">28,336,540</td>
+<td style="display:none" data-continent="South America">South America</td>
+</tr><tr style="" role="row" class="odd">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">56</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/moldova/">Moldova</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">7,161</td>
+<td style="font-weight: bold; text-align:right">6,617</td>
+<td style="font-weight: bold; text-align:right">+8%</td>
+<td style="font-weight: bold; text-align:right">1,780</td>
+<td style="font-weight: bold; text-align:right">93</td>
+<td style="font-weight: bold; text-align:right">79</td>
+<td style="font-weight: bold; text-align:right">+18%</td>
+<td style="font-weight: bold; text-align:right">23</td>
+ 
+
+
+
+<td style="font-weight: bold; text-align:right">4,022,397</td>
+<td style="display:none" data-continent="Europe">Europe</td>
+</tr><tr style="" role="row" class="even">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">57</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/nepal/">Nepal</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">6,752</td>
+<td style="font-weight: bold; text-align:right">7,585</td>
+<td style="font-weight: bold; text-align:right">-11%</td>
+<td style="font-weight: bold; text-align:right">227</td>
+<td style="font-weight: bold; text-align:right">59</td>
+<td style="font-weight: bold; text-align:right">92</td>
+<td style="font-weight: bold; text-align:right">-36%</td>
+<td style="font-weight: bold; text-align:right">2</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">29,781,467</td>
+<td style="display:none" data-continent="Asia">Asia</td>
+</tr><tr style="" role="row" class="odd">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">58</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/slovenia/">Slovenia</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">6,290</td>
+<td style="font-weight: bold; text-align:right">7,320</td>
+ <td style="font-weight: bold; text-align:right">-14%</td>
+<td style="font-weight: bold; text-align:right">3,025</td>
+<td style="font-weight: bold; text-align:right">37</td>
+<td style="font-weight: bold; text-align:right">25</td>
+<td style="font-weight: bold; text-align:right">+48%</td>
+<td style="font-weight: bold; text-align:right">18</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">2,079,290</td>
+<td style="display:none" data-continent="Europe">Europe</td>
+</tr><tr style="" role="row" class="even">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">59</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/libya/">Libya</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">6,167</td>
+<td style="font-weight: bold; text-align:right">7,337</td>
+<td style="font-weight: bold; text-align:right">-16%</td>
+<td style="font-weight: bold; text-align:right">883</td>
+<td style="font-weight: bold; text-align:right">98</td>
+<td style="font-weight: bold; text-align:right">80</td>
+<td style="font-weight: bold; text-align:right">+23%</td>
+<td style="font-weight: bold; text-align:right">14</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">6,986,318</td>
+<td style="display:none" data-continent="Africa">Africa</td>
+</tr><tr style="" role="row" class="odd">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">60</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/jordan/">Jordan</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">6,115</td>
+<td style="font-weight: bold; text-align:right">6,180</td>
+<td style="font-weight: bold; text-align:right">-1%</td>
+<td style="font-weight: bold; text-align:right">592</td>
+<td style="font-weight: bold; text-align:right">63</td>
+<td style="font-weight: bold; text-align:right">64</td>
+<td style="font-weight: bold; text-align:right">-2%</td>
+<td style="font-weight: bold; text-align:right">6</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">10,327,900</td>
+<td style="display:none" data-continent="Asia">Asia</td>
+</tr><tr style="" role="row" class="even">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">61</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/peru/">Peru</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">5,842</td>
+<td style="font-weight: bold; text-align:right">6,092</td>
+<td style="font-weight: bold; text-align:right">-4%</td>
+<td style="font-weight: bold; text-align:right">174</td>
+<td style="font-weight: bold; text-align:right">252</td>
+<td style="font-weight: bold; text-align:right">248</td>
+<td style="font-weight: bold; text-align:right">+2%</td>
+<td style="font-weight: bold; text-align:right">8</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">33,537,248</td>
+<td style="display:none" data-continent="South America">South America</td>
+</tr><tr style="" role="row" class="odd">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">62</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/slovakia/">Slovakia</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">5,733</td>
+<td style="font-weight: bold; text-align:right">3,788</td>
+<td style="font-weight: bold; text-align:right">+51%</td>
+<td style="font-weight: bold; text-align:right">1,049</td>
+<td style="font-weight: bold; text-align:right">27</td>
+<td style="font-weight: bold; text-align:right">11</td>
+<td style="font-weight: bold; text-align:right">+145%</td>
+<td style="font-weight: bold; text-align:right">5</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">5,462,903</td>
+<td style="display:none" data-continent="Europe">Europe</td>
+</tr><tr style="" role="row" class="even">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">63</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/tunisia/">Tunisia</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">5,690</td>
+<td style="font-weight: bold; text-align:right">6,495</td>
+<td style="font-weight: bold; text-align:right">-12%</td>
+<td style="font-weight: bold; text-align:right">475</td>
+<td style="font-weight: bold; text-align:right">240</td>
+<td style="font-weight: bold; text-align:right">334</td>
+<td style="font-weight: bold; text-align:right">-28%</td>
+<td style="font-weight: bold; text-align:right">20</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">11,970,934</td>
+<td style="display:none" data-continent="Africa">Africa</td>
+</tr><tr style="" role="row" class="odd">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">64</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/honduras/">Honduras</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">5,363</td>
+<td style="font-weight: bold; text-align:right">6,775</td>
+<td style="font-weight: bold; text-align:right">-21%</td>
+<td style="font-weight: bold; text-align:right">531</td>
+<td style="font-weight: bold; text-align:right">188</td>
+ <td style="font-weight: bold; text-align:right">172</td>
+<td style="font-weight: bold; text-align:right">+9%</td>
+<td style="font-weight: bold; text-align:right">19</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">10,098,459</td>
+<td style="display:none" data-continent="North America">North America</td>
+</tr><tr style="" role="row" class="even">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">65</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/poland/">Poland</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">5,196</td>
+<td style="font-weight: bold; text-align:right">4,222</td>
+<td style="font-weight: bold; text-align:right">+23%</td>
+<td style="font-weight: bold; text-align:right">137</td>
+<td style="font-weight: bold; text-align:right">84</td>
+<td style="font-weight: bold; text-align:right">62</td>
+<td style="font-weight: bold; text-align:right">+35%</td>
+<td style="font-weight: bold; text-align:right">2</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">37,795,481</td>
+<td style="display:none" data-continent="Europe">Europe</td>
+</tr><tr style="" role="row" class="odd">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">66</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/albania/">Albania</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">5,181</td>
+<td style="font-weight: bold; text-align:right">6,011</td>
+<td style="font-weight: bold; text-align:right">-14%</td>
+<td style="font-weight: bold; text-align:right">1,803</td>
+<td style="font-weight: bold; text-align:right">55</td>
+<td style="font-weight: bold; text-align:right">35</td>
+<td style="font-weight: bold; text-align:right">+57%</td>
+<td style="font-weight: bold; text-align:right">19</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">2,873,921</td>
+<td style="display:none" data-continent="Europe">Europe</td>
+</tr><tr style="" role="row" class="even">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">67</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/portugal/">Portugal</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">4,975</td>
+<td style="font-weight: bold; text-align:right">6,698</td>
+<td style="font-weight: bold; text-align:right">-26%</td>
+ <td style="font-weight: bold; text-align:right">490</td>
+<td style="font-weight: bold; text-align:right">50</td>
+<td style="font-weight: bold; text-align:right">49</td>
+<td style="font-weight: bold; text-align:right">+2%</td>
+<td style="font-weight: bold; text-align:right">5</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">10,160,029</td>
+<td style="display:none" data-continent="Europe">Europe</td>
+</tr><tr style="" role="row" class="odd">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">68</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/norway/">Norway</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">4,789</td>
+<td style="font-weight: bold; text-align:right">6,276</td>
+<td style="font-weight: bold; text-align:right">-24%</td>
+<td style="font-weight: bold; text-align:right">875</td>
+<td style="font-weight: bold; text-align:right">9</td>
+<td style="font-weight: bold; text-align:right">14</td>
+<td style="font-weight: bold; text-align:right">-36%</td>
+<td style="font-weight: bold; text-align:right">2</td>
+
+
+
+
+ <td style="font-weight: bold; text-align:right">5,473,472</td>
+<td style="display:none" data-continent="Europe">Europe</td>
+</tr><tr style="" role="row" class="even">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">69</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/cambodia/">Cambodia</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">4,775</td>
+<td style="font-weight: bold; text-align:right">4,640</td>
+<td style="font-weight: bold; text-align:right">+3%</td>
+<td style="font-weight: bold; text-align:right">281</td>
+<td style="font-weight: bold; text-align:right">122</td>
+<td style="font-weight: bold; text-align:right">68</td>
+<td style="font-weight: bold; text-align:right">+79%</td>
+<td style="font-weight: bold; text-align:right">7</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">17,003,797</td>
+<td style="display:none" data-continent="Asia">Asia</td>
+</tr><tr style="" role="row" class="odd">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">70</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/egypt/">Egypt</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">4,669</td>
+<td style="font-weight: bold; text-align:right">3,800</td>
+<td style="font-weight: bold; text-align:right">+23%</td>
+<td style="font-weight: bold; text-align:right">45</td>
+<td style="font-weight: bold; text-align:right">198</td>
+<td style="font-weight: bold; text-align:right">91</td>
+<td style="font-weight: bold; text-align:right">+118%</td>
+<td style="font-weight: bold; text-align:right">2</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">104,708,355</td>
+<td style="display:none" data-continent="Africa">Africa</td>
+</tr><tr style="" role="row" class="even">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">71</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/armenia/">Armenia</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">4,527</td>
+<td style="font-weight: bold; text-align:right">4,696</td>
+<td style="font-weight: bold; text-align:right">-4%</td>
+
+<td style="font-weight: bold; text-align:right">1,524</td>
+<td style="font-weight: bold; text-align:right">122</td>
+<td style="font-weight: bold; text-align:right">122</td>
+<td style="font-weight: bold; text-align:right">0%</td>
+<td style="font-weight: bold; text-align:right">41</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">2,970,072</td>
+<td style="display:none" data-continent="Asia">Asia</td>
+</tr><tr style="" role="row" class="odd">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">72</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/botswana/">Botswana</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">4,175</td>
+<td style="font-weight: bold; text-align:right">8,587</td>
+<td style="font-weight: bold; text-align:right">-51%</td>
+<td style="font-weight: bold; text-align:right">1,732</td>
+<td style="font-weight: bold; text-align:right">17</td>
+<td style="font-weight: bold; text-align:right">18</td>
+<td style="font-weight: bold; text-align:right">-6%</td>
+<td style="font-weight: bold; text-align:right">7</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">2,410,014</td>
+<td style="display:none" data-continent="Africa">Africa</td>
+</tr><tr style="" role="row" class="even">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">73</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/lebanon/">Lebanon</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">4,073</td>
+<td style="font-weight: bold; text-align:right">4,949</td>
+<td style="font-weight: bold; text-align:right">-18%</td>
+<td style="font-weight: bold; text-align:right">600</td>
+<td style="font-weight: bold; text-align:right">45</td>
+<td style="font-weight: bold; text-align:right">51</td>
+<td style="font-weight: bold; text-align:right">-12%</td>
+<td style="font-weight: bold; text-align:right">7</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">6,787,730</td>
+<td style="display:none" data-continent="Asia">Asia</td>
+</tr><tr style="" role="row" class="odd">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">74</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/latvia/">Latvia</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">4,063</td>
+<td style="font-weight: bold; text-align:right">3,356</td>
+<td style="font-weight: bold; text-align:right">+21%</td>
+<td style="font-weight: bold; text-align:right">2,184</td>
+<td style="font-weight: bold; text-align:right">42</td>
+<td style="font-weight: bold; text-align:right">33</td>
+<td style="font-weight: bold; text-align:right">+27%</td>
+<td style="font-weight: bold; text-align:right">23</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">1,860,451</td>
+<td style="display:none" data-continent="Europe">Europe</td>
+</tr><tr style="" role="row" class="even">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">75</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/chile/">Chile</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">3,991</td>
+<td style="font-weight: bold; text-align:right">3,364</td>
+<td style="font-weight: bold; text-align:right">+19%</td>
+<td style="font-weight: bold; text-align:right">207</td>
+<td style="font-weight: bold; text-align:right">93</td>
+<td style="font-weight: bold; text-align:right">138</td>
+<td style="font-weight: bold; text-align:right">-33%</td>
+<td style="font-weight: bold; text-align:right">5</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">19,318,363</td>
+<td style="display:none" data-continent="South America">South America</td>
+</tr><tr style="" role="row" class="odd">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">76</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/bosnia-and-herzegovina/">Bosnia and Herzegovina</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">3,967</td>
+<td style="font-weight: bold; text-align:right">5,552</td>
+<td style="font-weight: bold; text-align:right">-29%</td>
+<td style="font-weight: bold; text-align:right">1,219</td>
+<td style="font-weight: bold; text-align:right">203</td>
+<td style="font-weight: bold; text-align:right">194</td>
+<td style="font-weight: bold; text-align:right">+5%</td>
+<td style="font-weight: bold; text-align:right">62</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">3,255,634</td>
+<td style="display:none" data-continent="Europe">Europe</td>
+</tr><tr style="" role="row" class="even">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">77</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/estonia/">Estonia</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">3,757</td>
+<td style="font-weight: bold; text-align:right">2,936</td>
+<td style="font-weight: bold; text-align:right">+28%</td>
+<td style="font-weight: bold; text-align:right">2,830</td>
+<td style="font-weight: bold; text-align:right">18</td>
+<td style="font-weight: bold; text-align:right">15</td>
+<td style="font-weight: bold; text-align:right">+20%</td>
+<td style="font-weight: bold; text-align:right">14</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">1,327,635</td>
+<td style="display:none" data-continent="Europe">Europe</td>
+</tr><tr style="" role="row" class="odd">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">78</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/uzbekistan/">Uzbekistan</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">3,730</td>
+<td style="font-weight: bold; text-align:right">4,088</td>
+<td style="font-weight: bold; text-align:right">-9%</td>
+<td style="font-weight: bold; text-align:right">109</td>
+<td style="font-weight: bold; text-align:right">34</td>
+<td style="font-weight: bold; text-align:right">36</td>
+<td style="font-weight: bold; text-align:right">-6%</td>
+<td style="font-weight: bold; text-align:right">1.0</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">34,066,248</td>
+<td style="display:none" data-continent="Asia">Asia</td>
+</tr><tr style="" role="row" class="even">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">79</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/sweden/">Sweden</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">3,580</td>
+<td style="font-weight: bold; text-align:right">6,272</td>
+<td style="font-weight: bold; text-align:right">-43%</td>
+<td style="font-weight: bold; text-align:right">352</td>
+<td style="font-weight: bold; text-align:right">9</td>
+<td style="font-weight: bold; text-align:right">39</td>
+<td style="font-weight: bold; text-align:right">-77%</td>
+<td style="font-weight: bold; text-align:right">0.9</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">10,176,874</td> 
+<td style="display:none" data-continent="Europe">Europe</td>
+</tr><tr style="" role="row" class="odd">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">80</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/montenegro/">Montenegro</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">3,557</td>
+<td style="font-weight: bold; text-align:right">4,377</td>
+<td style="font-weight: bold; text-align:right">-19%</td>
+<td style="font-weight: bold; text-align:right">5,663</td>
+<td style="font-weight: bold; text-align:right">53</td>
+<td style="font-weight: bold; text-align:right">41</td>
+<td style="font-weight: bold; text-align:right">+29%</td>
+<td style="font-weight: bold; text-align:right">84</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">628,164</td>
+<td style="display:none" data-continent="Europe">Europe</td>
+</tr><tr style="" role="row" class="even">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">81</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/jamaica/">Jamaica</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">3,222</td>
+<td style="font-weight: bold; text-align:right">3,830</td>
+<td style="font-weight: bold; text-align:right">-16%</td>
+<td style="font-weight: bold; text-align:right">1,082</td>
+<td style="font-weight: bold; text-align:right">47</td>
+<td style="font-weight: bold; text-align:right">73</td>
+<td style="font-weight: bold; text-align:right">-36%</td>
+<td style="font-weight: bold; text-align:right">16</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">2,977,099</td>
+ <td style="display:none" data-continent="North America">North America</td>
+</tr><tr style="" role="row" class="odd">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">82</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/suriname/">Suriname</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">3,162</td>
+<td style="font-weight: bold; text-align:right">3,670</td>
+<td style="font-weight: bold; text-align:right">-14%</td>
+<td style="font-weight: bold; text-align:right">5,331</td>
+<td style="font-weight: bold; text-align:right">42</td>
+<td style="font-weight: bold; text-align:right">42</td>
+<td style="font-weight: bold; text-align:right">0%</td>
+<td style="font-weight: bold; text-align:right">71</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">593,107</td>
+<td style="display:none" data-continent="South America">South America</td>
+</tr><tr style="" role="row" class="even">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">83</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/czech-republic/">Czechia</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">3,074</td>
+<td style="font-weight: bold; text-align:right">2,934</td>
+<td style="font-weight: bold; text-align:right">+5%</td>
+<td style="font-weight: bold; text-align:right">286</td>
+<td style="font-weight: bold; text-align:right">16</td>
+<td style="font-weight: bold; text-align:right">10</td>
+<td style="font-weight: bold; text-align:right">+60%</td>
+<td style="font-weight: bold; text-align:right">1</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">10,733,479</td>
+<td style="display:none" data-continent="Europe">Europe</td>
+</tr><tr style="" role="row" class="odd">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">84</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/macedonia/">North Macedonia</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">3,002</td>
+<td style="font-weight: bold; text-align:right">3,490</td>
+<td style="font-weight: bold; text-align:right">-14%</td>
+<td style="font-weight: bold; text-align:right">1,441</td>
+<td style="font-weight: bold; text-align:right">140</td>
+<td style="font-weight: bold; text-align:right">201</td>
+<td style="font-weight: bold; text-align:right">-30%</td>
+<td style="font-weight: bold; text-align:right">67</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">2,083,269</td>
+<td style="display:none" data-continent="Europe">Europe</td>
+</tr><tr style="" role="row" class="even">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">85</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/hungary/">Hungary</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">2,919</td>
+<td style="font-weight: bold; text-align:right">2,427</td>
+<td style="font-weight: bold; text-align:right">+20%</td>
+<td style="font-weight: bold; text-align:right">303</td>
+<td style="font-weight: bold; text-align:right">28</td>
+<td style="font-weight: bold; text-align:right">37</td>
+<td style="font-weight: bold; text-align:right">-24%</td>
+<td style="font-weight: bold; text-align:right">3</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">9,630,089</td>
+<td style="display:none" data-continent="Europe">Europe</td>
+</tr><tr style="" role="row" class="odd">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">86</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/laos/">Laos</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">2,713</td>
+<td style="font-weight: bold; text-align:right">1,674</td>
+<td style="font-weight: bold; text-align:right">+62%</td>
+<td style="font-weight: bold; text-align:right">366</td>
+<td style="font-weight: bold; text-align:right">0</td>
+<td style="font-weight: bold; text-align:right">0</td>
+<td style="font-weight: bold; text-align:right">0%</td>
+<td style="font-weight: bold; text-align:right">0</td>
+ 
+
+
+
+<td style="font-weight: bold; text-align:right">7,405,509</td>
+<td style="display:none" data-continent="Asia">Asia</td>
+</tr><tr style="" role="row" class="even">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">87</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/nigeria/">Nigeria</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">2,571</td>
+<td style="font-weight: bold; text-align:right">2,844</td>
+<td style="font-weight: bold; text-align:right">-10%</td>
+<td style="font-weight: bold; text-align:right">12</td>
+<td style="font-weight: bold; text-align:right">19</td>
+<td style="font-weight: bold; text-align:right">64</td>
+<td style="font-weight: bold; text-align:right">-70%</td>
+<td style="font-weight: bold; text-align:right">0.1</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">212,417,022</td>
+<td style="display:none" data-continent="Africa">Africa</td>
+</tr><tr style="" role="row" class="odd">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">88</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/new-caledonia/">New Caledonia</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">2,558</td>
+<td style="font-weight: bold; text-align:right">3,000</td>
+<td style="font-weight: bold; text-align:right">-15%</td>
+<td style="font-weight: bold; text-align:right">8,855</td>
+<td style="font-weight: bold; text-align:right">56</td>
+<td style="font-weight: bold; text-align:right">15</td>
+<td style="font-weight: bold; text-align:right">+273%</td>
+<td style="font-weight: bold; text-align:right">194</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">288,879</td>
+<td style="display:none" data-continent="Australia/Oceania">Australia/Oceania</td>
+</tr><tr style="" role="row" class="even">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">89</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/angola/">Angola</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">2,488</td>
+<td style="font-weight: bold; text-align:right">1,959</td>
+<td style="font-weight: bold; text-align:right">+27%</td>
+<td style="font-weight: bold; text-align:right">73</td>
+<td style="font-weight: bold; text-align:right">99</td>
+<td style="font-weight: bold; text-align:right">61</td>
+<td style="font-weight: bold; text-align:right">+62%</td>
+<td style="font-weight: bold; text-align:right">3</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">34,120,984</td>
+<td style="display:none" data-continent="Africa">Africa</td>
+</tr><tr style="" role="row" class="odd">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">90</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/finland/">Finland</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">2,372</td>
+ <td style="font-weight: bold; text-align:right">3,544</td>
+<td style="font-weight: bold; text-align:right">-33%</td>
+<td style="font-weight: bold; text-align:right">427</td>
+<td style="font-weight: bold; text-align:right">11</td>
+<td style="font-weight: bold; text-align:right">12</td>
+<td style="font-weight: bold; text-align:right">-8%</td>
+<td style="font-weight: bold; text-align:right">2</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">5,551,334</td>
+<td style="display:none" data-continent="Europe">Europe</td>
+</tr><tr style="" role="row" class="even">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">91</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/united-arab-emirates/">UAE</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">2,297</td>
+<td style="font-weight: bold; text-align:right">4,033</td>
+<td style="font-weight: bold; text-align:right">-43%</td>
+<td style="font-weight: bold; text-align:right">229</td>
+<td style="font-weight: bold; text-align:right">16</td>
+<td style="font-weight: bold; text-align:right">11</td>
+<td style="font-weight: bold; text-align:right">+45%</td>
+<td style="font-weight: bold; text-align:right">2</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">10,037,546</td>
+<td style="display:none" data-continent="Asia">Asia</td>
+</tr><tr style="" role="row" class="odd">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">92</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/denmark/">Denmark</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">2,291</td>
+<td style="font-weight: bold; text-align:right">2,454</td>
+<td style="font-weight: bold; text-align:right">-7%</td>
+<td style="font-weight: bold; text-align:right">394</td>
+<td style="font-weight: bold; text-align:right">15</td>
+<td style="font-weight: bold; text-align:right">14</td>
+<td style="font-weight: bold; text-align:right">+7%</td>
+<td style="font-weight: bold; text-align:right">3</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">5,817,349</td>
+<td style="display:none" data-continent="Europe">Europe</td>
+</tr><tr style="" role="row" class="even">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">93</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/kenya/">Kenya</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">2,096</td>
+<td style="font-weight: bold; text-align:right">2,840</td>
+<td style="font-weight: bold; text-align:right">-26%</td>
+<td style="font-weight: bold; text-align:right">38</td>
+<td style="font-weight: bold; text-align:right">116</td>
+<td style="font-weight: bold; text-align:right">78</td>
+<td style="font-weight: bold; text-align:right">+49%</td>
+<td style="font-weight: bold; text-align:right">2</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">55,227,272</td>
+<td style="display:none" data-continent="Africa">Africa</td>
+</tr><tr style="" role="row" class="odd">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">94</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/syria/">Syria</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">2,061</td>
+<td style="font-weight: bold; text-align:right">1,161</td>
+<td style="font-weight: bold; text-align:right">+78%</td>
+<td style="font-weight: bold; text-align:right">114</td>
+<td style="font-weight: bold; text-align:right">78</td>
+<td style="font-weight: bold; text-align:right">49</td>
+<td style="font-weight: bold; text-align:right">+59%</td>
+<td style="font-weight: bold; text-align:right">4</td>
+
+
+
+ 
+<td style="font-weight: bold; text-align:right">18,023,045</td>
+<td style="display:none" data-continent="Asia">Asia</td>
+</tr><tr style="" role="row" class="even">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">95</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/panama/">Panama</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">1,955</td>
+<td style="font-weight: bold; text-align:right">2,028</td>
+<td style="font-weight: bold; text-align:right">-4%</td>
+<td style="font-weight: bold; text-align:right">444</td>
+<td style="font-weight: bold; text-align:right">31</td>
+<td style="font-weight: bold; text-align:right">39</td>
+<td style="font-weight: bold; text-align:right">-21%</td>
+<td style="font-weight: bold; text-align:right">7</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">4,398,353</td>
+<td style="display:none" data-continent="North America">North America</td>
+</tr><tr style="" role="row" class="odd">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">96</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/dominican-republic/">Dominican Republic</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">1,921</td>
+<td style="font-weight: bold; text-align:right">1,942</td>
+<td style="font-weight: bold; text-align:right">-1%</td>
+<td style="font-weight: bold; text-align:right">175</td>
+<td style="font-weight: bold; text-align:right">8</td>
+<td style="font-weight: bold; text-align:right">13</td>
+<td style="font-weight: bold; text-align:right">-38%</td>
+<td style="font-weight: bold; text-align:right">0.7</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">10,981,903</td>
+<td style="display:none" data-continent="North America">North America</td>
+</tr><tr style="" role="row" class="even">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">97</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/bolivia/">Bolivia</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">1,895</td>
+<td style="font-weight: bold; text-align:right">2,036</td>
+<td style="font-weight: bold; text-align:right">-7%</td>
+<td style="font-weight: bold; text-align:right">160</td>
+<td style="font-weight: bold; text-align:right">48</td>
+<td style="font-weight: bold; text-align:right">80</td>
+<td style="font-weight: bold; text-align:right">-40%</td>
+<td style="font-weight: bold; text-align:right">4</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">11,869,039</td>
+<td style="display:none" data-continent="South America">South America</td>
+</tr><tr style="" role="row" class="odd">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">98</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/zimbabwe/">Zimbabwe</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">1,766</td>
+<td style="font-weight: bold; text-align:right">1,519</td>
+<td style="font-weight: bold; text-align:right">+16%</td>
+<td style="font-weight: bold; text-align:right">117</td>
+<td style="font-weight: bold; text-align:right">40</td>
+<td style="font-weight: bold; text-align:right">27</td>
+<td style="font-weight: bold; text-align:right">+48%</td>
+<td style="font-weight: bold; text-align:right">3</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">15,129,235</td>
+ <td style="display:none" data-continent="Africa">Africa</td>
+</tr><tr style="" role="row" class="even">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">99</td>
+ <td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/ghana/">Ghana</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">1,616</td>
+<td style="font-weight: bold; text-align:right">2,226</td>
+<td style="font-weight: bold; text-align:right">-27%</td>
+<td style="font-weight: bold; text-align:right">51</td>
+<td style="font-weight: bold; text-align:right">28</td>
+<td style="font-weight: bold; text-align:right">31</td>
+<td style="font-weight: bold; text-align:right">-10%</td>
+<td style="font-weight: bold; text-align:right">0.9</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">31,870,419</td>
+<td style="display:none" data-continent="Africa">Africa</td>
+</tr><tr style="" role="row" class="odd">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">100</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/rwanda/">Rwanda</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">1,610</td>
+<td style="font-weight: bold; text-align:right">2,724</td>
+<td style="font-weight: bold; text-align:right">-41%</td>
+<td style="font-weight: bold; text-align:right">121</td>
+<td style="font-weight: bold; text-align:right">42</td>
+<td style="font-weight: bold; text-align:right">42</td>
+<td style="font-weight: bold; text-align:right">0%</td>
+<td style="font-weight: bold; text-align:right">3</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">13,346,701</td>
+<td style="display:none" data-continent="Africa">Africa</td>
+</tr><tr style="" role="row" class="even">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">101</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/guyana/">Guyana</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">1,562</td>
+<td style="font-weight: bold; text-align:right">1,563</td>
+<td style="font-weight: bold; text-align:right">-0.1%</td>
+<td style="font-weight: bold; text-align:right">1,974</td>
+<td style="font-weight: bold; text-align:right">41</td>
+<td style="font-weight: bold; text-align:right">39</td>
+<td style="font-weight: bold; text-align:right">+5%</td>
+
+<td style="font-weight: bold; text-align:right">52</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">791,230</td>
+<td style="display:none" data-continent="South America">South America</td>
+</tr><tr style="" role="row" class="odd">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">102</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/french-guiana/">French Guiana</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">1,524</td>
+<td style="font-weight: bold; text-align:right">1,407</td>
+<td style="font-weight: bold; text-align:right">+8%</td>
+<td style="font-weight: bold; text-align:right">4,945</td>
+<td style="font-weight: bold; text-align:right">21</td>
+<td style="font-weight: bold; text-align:right">8</td>
+<td style="font-weight: bold; text-align:right">+163%</td>
+<td style="font-weight: bold; text-align:right">68</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">308,192</td>
+<td style="display:none" data-continent="South America">South America</td>
+</tr><tr style="" role="row" class="even">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">103</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/benin/">Benin</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">1,508</td>
+<td style="font-weight: bold; text-align:right">1,609</td>
+<td style="font-weight: bold; text-align:right">-6%</td>
+<td style="font-weight: bold; text-align:right">121</td>
+<td style="font-weight: bold; text-align:right">8</td>
+<td style="font-weight: bold; text-align:right">5</td>
+<td style="font-weight: bold; text-align:right">+60%</td>
+<td style="font-weight: bold; text-align:right">0.6</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">12,513,247</td>
+<td style="display:none" data-continent="Africa">Africa</td>
+</tr><tr style="" role="row" class="odd">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">104</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/gabon/">Gabon</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">1,483</td>
+<td style="font-weight: bold; text-align:right">1,005</td>
+<td style="font-weight: bold; text-align:right">+48%</td>
+<td style="font-weight: bold; text-align:right">648</td>
+<td style="font-weight: bold; text-align:right">3</td>
+<td style="font-weight: bold; text-align:right">5</td>
+<td style="font-weight: bold; text-align:right">-40%</td>
+<td style="font-weight: bold; text-align:right">1</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">2,290,274</td>
+<td style="display:none" data-continent="Africa">Africa</td>
+</tr><tr style="" role="row" class="even">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">105</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/cyprus/">Cyprus</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">1,473</td>
+<td style="font-weight: bold; text-align:right">385</td>
+
+<td style="font-weight: bold; text-align:right">+283%</td>
+<td style="font-weight: bold; text-align:right">1,209</td>
+<td style="font-weight: bold; text-align:right">18</td>
+<td style="font-weight: bold; text-align:right">6</td>
+<td style="font-weight: bold; text-align:right">+200%</td>
+<td style="font-weight: bold; text-align:right">15</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">1,218,189</td>
+<td style="display:none" data-continent="Asia">Asia</td>
+</tr><tr style="" role="row" class="odd">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">106</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/trinidad-and-tobago/">Trinidad and Tobago</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">1,422</td>
+<td style="font-weight: bold; text-align:right">1,405</td>
+<td style="font-weight: bold; text-align:right">+1%</td>
+<td style="font-weight: bold; text-align:right">1,012</td>
+<td style="font-weight: bold; text-align:right">38</td>
+<td style="font-weight: bold; text-align:right">45</td>
+<td style="font-weight: bold; text-align:right">-16%</td>
+
+<td style="font-weight: bold; text-align:right">27</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">1,405,075</td>
+<td style="display:none" data-continent="North America">North America</td>
+</tr><tr style="" role="row" class="even">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">107</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/brunei-darussalam/">Brunei </a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">1,329</td>
+<td style="font-weight: bold; text-align:right">922</td>
+<td style="font-weight: bold; text-align:right">+44%</td>
+<td style="font-weight: bold; text-align:right">3,002</td>
+<td style="font-weight: bold; text-align:right">11</td>
+<td style="font-weight: bold; text-align:right">7</td>
+<td style="font-weight: bold; text-align:right">+57%</td>
+<td style="font-weight: bold; text-align:right">25</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">442,639</td>
+<td style="display:none" data-continent="Asia">Asia</td>
+</tr><tr style="" role="row" class="odd">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">108</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/algeria/">Algeria</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">1,149</td>
+<td style="font-weight: bold; text-align:right">1,603</td>
+<td style="font-weight: bold; text-align:right">-28%</td>
+<td style="font-weight: bold; text-align:right">26</td>
+<td style="font-weight: bold; text-align:right">86</td>
+<td style="font-weight: bold; text-align:right">123</td>
+<td style="font-weight: bold; text-align:right">-30%</td>
+<td style="font-weight: bold; text-align:right">2</td>
+
+ 
+
+
+<td style="font-weight: bold; text-align:right">44,825,099</td>
+<td style="display:none" data-continent="Africa">Africa</td>
+</tr><tr style="" role="row" class="even">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">109</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/belize/">Belize</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">1,068</td>
+<td style="font-weight: bold; text-align:right">1,127</td>
+<td style="font-weight: bold; text-align:right">-5%</td>
+<td style="font-weight: bold; text-align:right">2,627</td>
+<td style="font-weight: bold; text-align:right">13</td>
+<td style="font-weight: bold; text-align:right">16</td>
+<td style="font-weight: bold; text-align:right">-19%</td>
+<td style="font-weight: bold; text-align:right">32</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">406,507</td>
+<td style="display:none" data-continent="North America">North America</td>
+</tr><tr style="" role="row" class="odd">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">110</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/grenada/">Grenada</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">988</td>
+<td style="font-weight: bold; text-align:right">1,496</td>
+<td style="font-weight: bold; text-align:right">-34%</td>
+<td style="font-weight: bold; text-align:right">8,731</td>
+<td style="font-weight: bold; text-align:right">66</td>
+<td style="font-weight: bold; text-align:right">26</td>
+<td style="font-weight: bold; text-align:right">+154%</td>
+<td style="font-weight: bold; text-align:right">583</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">113,166</td>
+<td style="display:none" data-continent="North America">North America</td>
+</tr><tr style="" role="row" class="even">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">111</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/uganda/">Uganda</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">983</td>
+<td style="font-weight: bold; text-align:right">787</td>
+<td style="font-weight: bold; text-align:right">+25%</td>
+
+<td style="font-weight: bold; text-align:right">21</td>
+<td style="font-weight: bold; text-align:right">20</td>
+<td style="font-weight: bold; text-align:right">31</td>
+<td style="font-weight: bold; text-align:right">-35%</td>
+<td style="font-weight: bold; text-align:right">0.4</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">47,513,700</td>
+<td style="display:none" data-continent="Africa">Africa</td>
+</tr><tr style="" role="row" class="odd">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">112</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/barbados/">Barbados</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">948</td>
+<td style="font-weight: bold; text-align:right">609</td>
+<td style="font-weight: bold; text-align:right">+56%</td>
+<td style="font-weight: bold; text-align:right">3,294</td>
+<td style="font-weight: bold; text-align:right">7</td>
+<td style="font-weight: bold; text-align:right">5</td>
+<td style="font-weight: bold; text-align:right">+40%</td>
+<td style="font-weight: bold; text-align:right">24</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">287,809</td>
+<td style="display:none" data-continent="North America">North America</td>
+</tr><tr style="" role="row" class="even">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">113</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/mauritius/">Mauritius</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">918</td>
+<td style="font-weight: bold; text-align:right">1,129</td>
+<td style="font-weight: bold; text-align:right">-19%</td>
+<td style="font-weight: bold; text-align:right">720</td>
+<td style="font-weight: bold; text-align:right">21</td>
+<td style="font-weight: bold; text-align:right">8</td>
+<td style="font-weight: bold; text-align:right">+163%</td>
+<td style="font-weight: bold; text-align:right">16</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">1,274,370</td>
+<td style="display:none" data-continent="Africa">Africa</td>
+</tr><tr style="" role="row" class="odd">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">114</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/cote-d-ivoire/">Ivory Coast</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">889</td>
+<td style="font-weight: bold; text-align:right">1,105</td>
+<td style="font-weight: bold; text-align:right">-20%</td>
+<td style="font-weight: bold; text-align:right">33</td>
+<td style="font-weight: bold; text-align:right">32</td>
+<td style="font-weight: bold; text-align:right">55</td>
+<td style="font-weight: bold; text-align:right">-42%</td>
+<td style="font-weight: bold; text-align:right">1</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">27,180,836</td>
+<td style="display:none" data-continent="Africa">Africa</td>
+</tr><tr style="" role="row" class="even">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">115</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/ecuador/">Ecuador</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">884</td>
+<td style="font-weight: bold; text-align:right">1,712</td>
+<td style="font-weight: bold; text-align:right">-48%</td>
+<td style="font-weight: bold; text-align:right">49</td>
+<td style="font-weight: bold; text-align:right">65</td>
+<td style="font-weight: bold; text-align:right">211</td>
+<td style="font-weight: bold; text-align:right">-69%</td>
+<td style="font-weight: bold; text-align:right">4</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">17,972,775</td>
+<td style="display:none" data-continent="South America">South America</td>
+</tr><tr style="" role="row" class="odd">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">116</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/uruguay/">Uruguay</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">869</td>
+<td style="font-weight: bold; text-align:right">993</td>
+<td style="font-weight: bold; text-align:right">-12%</td>
+<td style="font-weight: bold; text-align:right">249</td>
+<td style="font-weight: bold; text-align:right">4</td>
+<td style="font-weight: bold; text-align:right">9</td>
+<td style="font-weight: bold; text-align:right">-56%</td>
+<td style="font-weight: bold; text-align:right">1</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">3,488,572</td>
+<td style="display:none" data-continent="South America">South America</td>
+</tr><tr style="" role="row" class="even">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">117</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/qatar/">Qatar</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">845</td>
+<td style="font-weight: bold; text-align:right">877</td>
+<td style="font-weight: bold; text-align:right">-4%</td>
+<td style="font-weight: bold; text-align:right">301</td>
+<td style="font-weight: bold; text-align:right">0</td>
+<td style="font-weight: bold; text-align:right">0</td>
+<td style="font-weight: bold; text-align:right">0%</td>
+<td style="font-weight: bold; text-align:right">0</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">2,807,805</td>
+<td style="display:none" data-continent="Asia">Asia</td>
+</tr><tr style="" role="row" class="odd">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">118</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/fiji/">Fiji</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">821</td>
+<td style="font-weight: bold; text-align:right">1,022</td>
+<td style="font-weight: bold; text-align:right">-20%</td>
+<td style="font-weight: bold; text-align:right">908</td>
+ <td style="font-weight: bold; text-align:right">15</td>
+<td style="font-weight: bold; text-align:right">31</td>
+<td style="font-weight: bold; text-align:right">-52%</td>
+<td style="font-weight: bold; text-align:right">17</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">904,450</td>
+<td style="display:none" data-continent="Australia/Oceania">Australia/Oceania</td>
+</tr><tr style="" role="row" class="even">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">119</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/martinique/">Martinique</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">800</td>
+<td style="font-weight: bold; text-align:right">877</td>
+<td style="font-weight: bold; text-align:right">-9%</td>
+<td style="font-weight: bold; text-align:right">2,134</td>
+<td style="font-weight: bold; text-align:right">27</td>
+<td style="font-weight: bold; text-align:right">46</td>
+<td style="font-weight: bold; text-align:right">-41%</td>
+<td style="font-weight: bold; text-align:right">72</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">374,906</td>
+<td style="display:none" data-continent="North America">North America</td>
+</tr><tr style="" role="row" class="odd">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">120</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/maldives/">Maldives</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">796</td>
+<td style="font-weight: bold; text-align:right">810</td>
+<td style="font-weight: bold; text-align:right">-2%</td>
+<td style="font-weight: bold; text-align:right">1,441</td>
+<td style="font-weight: bold; text-align:right">2</td>
+<td style="font-weight: bold; text-align:right">2</td>
+<td style="font-weight: bold; text-align:right">0%</td>
+<td style="font-weight: bold; text-align:right">4</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">552,256</td>
+<td style="display:none" data-continent="Asia">Asia</td>
+</tr><tr style="" role="row" class="even">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">121</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/bermuda/">Bermuda</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">764</td>
+<td style="font-weight: bold; text-align:right">753</td>
+<td style="font-weight: bold; text-align:right">+1%</td>
+<td style="font-weight: bold; text-align:right">12,324</td>
+<td style="font-weight: bold; text-align:right">14</td>
+<td style="font-weight: bold; text-align:right">3</td>
+<td style="font-weight: bold; text-align:right">+367%</td>
+<td style="font-weight: bold; text-align:right">226</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">61,994</td>
+<td style="display:none" data-continent="North America">North America</td>
+</tr><tr style="" role="row" class="odd">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">122</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/equatorial-guinea/">Equatorial Guinea</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">743</td>
+<td style="font-weight: bold; text-align:right">565</td>
+<td style="font-weight: bold; text-align:right">+32%</td>
+<td style="font-weight: bold; text-align:right">509</td>
+<td style="font-weight: bold; text-align:right">5</td>
+<td style="font-weight: bold; text-align:right">6</td>
+<td style="font-weight: bold; text-align:right">-17%</td>
+<td style="font-weight: bold; text-align:right">3</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">1,459,536</td>
+<td style="display:none" data-continent="Africa">Africa</td>
+</tr><tr style="" role="row" class="even">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">123</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/papua-new-guinea/">Papua New Guinea</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">736</td>
+<td style="font-weight: bold; text-align:right">161</td>
+<td style="font-weight: bold; text-align:right">+357%</td>
+<td style="font-weight: bold; text-align:right">80</td>
+<td style="font-weight: bold; text-align:right">21</td>
+<td style="font-weight: bold; text-align:right">8</td>
+<td style="font-weight: bold; text-align:right">+163%</td>
+<td style="font-weight: bold; text-align:right">2</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">9,155,474</td>
+<td style="display:none" data-continent="Australia/Oceania">Australia/Oceania</td>
+</tr><tr style="" role="row" class="odd">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">124</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/somalia/">Somalia</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">719</td>
+<td style="font-weight: bold; text-align:right">631</td>
+<td style="font-weight: bold; text-align:right">+14%</td>
+<td style="font-weight: bold; text-align:right">44</td>
+<td style="font-weight: bold; text-align:right">40</td>
+<td style="font-weight: bold; text-align:right">40</td>
+<td style="font-weight: bold; text-align:right">0%</td>
+<td style="font-weight: bold; text-align:right">2</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">16,437,713</td>
+<td style="display:none" data-continent="Africa">Africa</td>
+</tr><tr style="" role="row" class="even">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">125</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/nicaragua/">Nicaragua</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">705</td>
+<td style="font-weight: bold; text-align:right">675</td>
+<td style="font-weight: bold; text-align:right">+4%</td>
+<td style="font-weight: bold; text-align:right">105</td>
+<td style="font-weight: bold; text-align:right">1</td>
+<td style="font-weight: bold; text-align:right">1</td>
+<td style="font-weight: bold; text-align:right">0%</td>
+<td style="font-weight: bold; text-align:right">0.1</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">6,721,607</td>
+<td style="display:none" data-continent="North America">North America</td>
+</tr><tr style="" role="row" class="odd">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">126</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/el-salvador/">El Salvador</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">679</td>
+<td style="font-weight: bold; text-align:right">2,289</td>
+<td style="font-weight: bold; text-align:right">-70%</td>
+<td style="font-weight: bold; text-align:right">104</td>
+<td style="font-weight: bold; text-align:right">84</td>
+<td style="font-weight: bold; text-align:right">77</td>
+<td style="font-weight: bold; text-align:right">+9%</td>
+<td style="font-weight: bold; text-align:right">13</td>
+
+
+ 
+
+<td style="font-weight: bold; text-align:right">6,526,545</td>
+<td style="display:none" data-continent="North America">North America</td>
+</tr><tr style="" role="row" class="even">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">127</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/guadeloupe/">Guadeloupe</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">660</td>
+<td style="font-weight: bold; text-align:right">1,013</td>
+<td style="font-weight: bold; text-align:right">-35%</td>
+<td style="font-weight: bold; text-align:right">1,649</td>
+<td style="font-weight: bold; text-align:right">22</td>
+<td style="font-weight: bold; text-align:right">56</td>
+<td style="font-weight: bold; text-align:right">-61%</td>
+<td style="font-weight: bold; text-align:right">55</td>
+
+
+
+ 
+<td style="font-weight: bold; text-align:right">400,208</td>
+<td style="display:none" data-continent="North America">North America</td>
+</tr><tr style="" role="row" class="odd">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">128</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/saint-lucia/">Saint Lucia</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">654</td>
+<td style="font-weight: bold; text-align:right">872</td>
+<td style="font-weight: bold; text-align:right">-25%</td>
+<td style="font-weight: bold; text-align:right">3,542</td>
+<td style="font-weight: bold; text-align:right">33</td>
+<td style="font-weight: bold; text-align:right">18</td>
+<td style="font-weight: bold; text-align:right">+83%</td>
+<td style="font-weight: bold; text-align:right">179</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">184,662</td>
+<td style="display:none" data-continent="North America">North America</td>
+</tr><tr style="" role="row" class="even">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">129</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/togo/">Togo</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">644</td>
+<td style="font-weight: bold; text-align:right">901</td>
+<td style="font-weight: bold; text-align:right">-29%</td>
+<td style="font-weight: bold; text-align:right">76</td>
+<td style="font-weight: bold; text-align:right">9</td>
+<td style="font-weight: bold; text-align:right">8</td>
+<td style="font-weight: bold; text-align:right">+13%</td>
+<td style="font-weight: bold; text-align:right">1</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">8,517,177</td>
+<td style="display:none" data-continent="Africa">Africa</td>
+</tr><tr style="" role="row" class="odd">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">130</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/reunion/">Réunion</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">598</td>
+<td style="font-weight: bold; text-align:right">992</td>
+ <td style="font-weight: bold; text-align:right">-40%</td>
+<td style="font-weight: bold; text-align:right">662</td>
+<td style="font-weight: bold; text-align:right">5</td>
+<td style="font-weight: bold; text-align:right">4</td>
+<td style="font-weight: bold; text-align:right">+25%</td>
+<td style="font-weight: bold; text-align:right">6</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">903,185</td>
+<td style="display:none" data-continent="Africa">Africa</td>
+</tr><tr style="" role="row" class="even">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">131</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/afghanistan/">Afghanistan</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">593</td>
+<td style="font-weight: bold; text-align:right">549</td>
+<td style="font-weight: bold; text-align:right">+8%</td>
+<td style="font-weight: bold; text-align:right">15</td>
+<td style="font-weight: bold; text-align:right">7</td>
+<td style="font-weight: bold; text-align:right">24</td>
+<td style="font-weight: bold; text-align:right">-71%</td>
+<td style="font-weight: bold; text-align:right">0.2</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">40,005,954</td>
+<td style="display:none" data-continent="Asia">Asia</td>
+</tr><tr style="" role="row" class="odd">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">132</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/bahamas/">Bahamas</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">573</td>
+<td style="font-weight: bold; text-align:right">695</td>
+<td style="font-weight: bold; text-align:right">-18%</td>
+<td style="font-weight: bold; text-align:right">1,440</td>
+<td style="font-weight: bold; text-align:right">18</td>
+<td style="font-weight: bold; text-align:right">51</td>
+<td style="font-weight: bold; text-align:right">-65%</td>
+<td style="font-weight: bold; text-align:right">45</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">397,873</td>
+<td style="display:none" data-continent="North America">North America</td>
+</tr><tr style="" role="row" class="even">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">133</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/luxembourg/">Luxembourg</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">573</td>
+<td style="font-weight: bold; text-align:right">557</td>
+<td style="font-weight: bold; text-align:right">+3%</td>
+<td style="font-weight: bold; text-align:right">897</td>
+<td style="font-weight: bold; text-align:right">1</td>
+<td style="font-weight: bold; text-align:right">0</td>
+<td style="font-weight: bold; text-align:right">+100%</td>
+<td style="font-weight: bold; text-align:right">2</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">638,509</td>
+<td style="display:none" data-continent="Europe">Europe</td>
+</tr><tr style="" role="row" class="odd">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">134</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/bahrain/">Bahrain</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">566</td>
+<td style="font-weight: bold; text-align:right">557</td>
+<td style="font-weight: bold; text-align:right">+2%</td>
+<td style="font-weight: bold; text-align:right">319</td>
+<td style="font-weight: bold; text-align:right">1</td>
+<td style="font-weight: bold; text-align:right">0</td>
+<td style="font-weight: bold; text-align:right">+100%</td>
+<td style="font-weight: bold; text-align:right">0.6</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">1,774,116</td>
+<td style="display:none" data-continent="Asia">Asia</td>
+</tr><tr style="" role="row" class="even">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">135</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/kyrgyzstan/">Kyrgyzstan</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">549</td>
+<td style="font-weight: bold; text-align:right">570</td>
+<td style="font-weight: bold; text-align:right">-4%</td>
+<td style="font-weight: bold; text-align:right">82</td>
+<td style="font-weight: bold; text-align:right">13</td>
+<td style="font-weight: bold; text-align:right">17</td>
+<td style="font-weight: bold; text-align:right">-24%</td>
+<td style="font-weight: bold; text-align:right">2</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">6,656,640</td>
+<td style="display:none" data-continent="Asia">Asia</td>
+</tr><tr style="" role="row" class="odd">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">136</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/namibia/">Namibia</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">519</td>
+<td style="font-weight: bold; text-align:right">505</td>
+<td style="font-weight: bold; text-align:right">+3%</td>
+<td style="font-weight: bold; text-align:right">200</td>
+<td style="font-weight: bold; text-align:right">26</td>
+<td style="font-weight: bold; text-align:right">35</td>
+<td style="font-weight: bold; text-align:right">-26%</td>
+<td style="font-weight: bold; text-align:right">10</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">2,597,509</td>
+<td style="display:none" data-continent="Africa">Africa</td>
+</tr><tr style="" role="row" class="even">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">137</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/saint-vincent-and-the-grenadines/">St. Vincent Grenadines</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">519</td>
+<td style="font-weight: bold; text-align:right">282</td>
+<td style="font-weight: bold; text-align:right">+84%</td>
+<td style="font-weight: bold; text-align:right">4,660</td>
+<td style="font-weight: bold; text-align:right">3</td>
+<td style="font-weight: bold; text-align:right">2</td>
+<td style="font-weight: bold; text-align:right">+50%</td>
+<td style="font-weight: bold; text-align:right">27</td>
+
+
+
+
+ <td style="font-weight: bold; text-align:right">111,374</td>
+<td style="display:none" data-continent="North America">North America</td>
+</tr><tr style="" role="row" class="odd">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">138</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/mozambique/">Mozambique</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">513</td>
+<td style="font-weight: bold; text-align:right">893</td>
+<td style="font-weight: bold; text-align:right">-43%</td>
+
+<td style="font-weight: bold; text-align:right">16</td>
+<td style="font-weight: bold; text-align:right">6</td>
+<td style="font-weight: bold; text-align:right">11</td>
+<td style="font-weight: bold; text-align:right">-45%</td>
+<td style="font-weight: bold; text-align:right">0.2</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">32,330,710</td>
+<td style="display:none" data-continent="Africa">Africa</td>
+</tr><tr style="" role="row" class="even">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">139</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/dominica/">Dominica</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">439</td>
+<td style="font-weight: bold; text-align:right">260</td>
+<td style="font-weight: bold; text-align:right">+69%</td>
+<td style="font-weight: bold; text-align:right">6,080</td>
+<td style="font-weight: bold; text-align:right">5</td>
+<td style="font-weight: bold; text-align:right">1</td>
+<td style="font-weight: bold; text-align:right">+400%</td>
+<td style="font-weight: bold; text-align:right">69</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">72,206</td>
+<td style="display:none" data-continent="North America">North America</td>
+</tr><tr style="" role="row" class="odd">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">140</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/mauritania/">Mauritania</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">439</td>
+<td style="font-weight: bold; text-align:right">609</td>
+<td style="font-weight: bold; text-align:right">-28%</td>
+<td style="font-weight: bold; text-align:right">91</td>
+<td style="font-weight: bold; text-align:right">3</td>
+<td style="font-weight: bold; text-align:right">16</td>
+<td style="font-weight: bold; text-align:right">-81%</td>
+<td style="font-weight: bold; text-align:right">0.6</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">4,799,780</td> 
+<td style="display:none" data-continent="Africa">Africa</td>
+</tr><tr style="" role="row" class="even">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">141</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/congo/">Congo</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">412</td>
+<td style="font-weight: bold; text-align:right">0</td>
+<td style="font-weight: bold; text-align:right">+41,200%</td>
+<td style="font-weight: bold; text-align:right">72</td>
+<td style="font-weight: bold; text-align:right">8</td>
+<td style="font-weight: bold; text-align:right">0</td>
+<td style="font-weight: bold; text-align:right">+800%</td>
+ <td style="font-weight: bold; text-align:right">1</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">5,684,970</td>
+<td style="display:none" data-continent="Africa">Africa</td>
+</tr><tr style="" role="row" class="odd">
+ <td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">142</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/zambia/">Zambia</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">407</td>
+<td style="font-weight: bold; text-align:right">586</td>
+<td style="font-weight: bold; text-align:right">-31%</td>
+<td style="font-weight: bold; text-align:right">21</td>
+<td style="font-weight: bold; text-align:right">7</td>
+<td style="font-weight: bold; text-align:right">9</td>
+<td style="font-weight: bold; text-align:right">-22%</td>
+<td style="font-weight: bold; text-align:right">0.4</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">19,016,173</td>
+<td style="display:none" data-continent="Africa">Africa</td>
+</tr><tr style="" role="row" class="even">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">143</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/saudi-arabia/">Saudi Arabia</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">403</td>
+<td style="font-weight: bold; text-align:right">567</td>
+<td style="font-weight: bold; text-align:right">-29%</td>
+<td style="font-weight: bold; text-align:right">11</td>
+<td style="font-weight: bold; text-align:right">38</td>
+<td style="font-weight: bold; text-align:right">39</td>
+<td style="font-weight: bold; text-align:right">-3%</td>
+<td style="font-weight: bold; text-align:right">1</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">35,481,097</td>
+<td style="display:none" data-continent="Asia">Asia</td>
+</tr><tr style="" role="row" class="odd">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">144</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/swaziland/">Eswatini</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">390</td>
+<td style="font-weight: bold; text-align:right">521</td>
+<td style="font-weight: bold; text-align:right">-25%</td>
+<td style="font-weight: bold; text-align:right">332</td>
+<td style="font-weight: bold; text-align:right">18</td>
+<td style="font-weight: bold; text-align:right">25</td>
+<td style="font-weight: bold; text-align:right">-28%</td>
+<td style="font-weight: bold; text-align:right">15</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">1,174,959</td> 
+<td style="display:none" data-continent="Africa">Africa</td>
+</tr><tr style="" role="row" class="even">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">145</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/china/">China</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">363</td>
+<td style="font-weight: bold; text-align:right">470</td>
+<td style="font-weight: bold; text-align:right">-23%</td>
+<td style="font-weight: bold; text-align:right">0.3</td>
+<td style="font-weight: bold; text-align:right">0</td>
+<td style="font-weight: bold; text-align:right">0</td>
+<td style="font-weight: bold; text-align:right">0%</td>
+<td style="font-weight: bold; text-align:right">0</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">1,446,175,699</td>
+<td style="display:none" data-continent="Asia">Asia</td>
+</tr><tr style="" role="row" class="odd">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">146</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/burundi/">Burundi</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">360</td>
+<td style="font-weight: bold; text-align:right">1,949</td>
+<td style="font-weight: bold; text-align:right">-82%</td>
+<td style="font-weight: bold; text-align:right">29</td>
+<td style="font-weight: bold; text-align:right">0</td>
+<td style="font-weight: bold; text-align:right">0</td>
+<td style="font-weight: bold; text-align:right">0%</td>
+<td style="font-weight: bold; text-align:right">0</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">12,325,513</td>
+<td style="display:none" data-continent="Africa">Africa</td>
+</tr><tr style="" role="row" class="even">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">147</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/timor-leste/">Timor-Leste</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">356</td>
+<td style="font-weight: bold; text-align:right">612</td>
+<td style="font-weight: bold; text-align:right">-42%</td>
+<td style="font-weight: bold; text-align:right">264</td>
+<td style="font-weight: bold; text-align:right">10</td>
+<td style="font-weight: bold; text-align:right">13</td>
+<td style="font-weight: bold; text-align:right">-23%</td>
+<td style="font-weight: bold; text-align:right">7</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">1,349,330</td>
+<td style="display:none" data-continent="Asia">Asia</td>
+</tr><tr style="" role="row" class="odd">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">148</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/cabo-verde/">Cabo Verde</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">348</td>
+<td style="font-weight: bold; text-align:right">533</td>
+<td style="font-weight: bold; text-align:right">-35%</td>
+<td style="font-weight: bold; text-align:right">618</td>
+<td style="font-weight: bold; text-align:right">5</td>
+<td style="font-weight: bold; text-align:right">9</td>
+<td style="font-weight: bold; text-align:right">-44%</td>
+<td style="font-weight: bold; text-align:right">9</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">563,424</td>
+<td style="display:none" data-continent="Africa">Africa</td>
+</tr><tr style="" role="row" class="even">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">149</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/kuwait/">Kuwait</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">323</td>
+<td style="font-weight: bold; text-align:right">390</td>
+<td style="font-weight: bold; text-align:right">-17%</td>
+<td style="font-weight: bold; text-align:right">74</td>
+<td style="font-weight: bold; text-align:right">7</td>
+<td style="font-weight: bold; text-align:right">8</td>
+<td style="font-weight: bold; text-align:right">-13%</td>
+<td style="font-weight: bold; text-align:right">2</td>
+
+
+ 
+
+<td style="font-weight: bold; text-align:right">4,348,306</td>
+<td style="display:none" data-continent="Asia">Asia</td>
+</tr><tr style="" role="row" class="odd">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">150</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/seychelles/">Seychelles</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">314</td>
+<td style="font-weight: bold; text-align:right">350</td>
+<td style="font-weight: bold; text-align:right">-10%</td>
+<td style="font-weight: bold; text-align:right">3,169</td>
+<td style="font-weight: bold; text-align:right">1</td>
+<td style="font-weight: bold; text-align:right">4</td>
+ <td style="font-weight: bold; text-align:right">-75%</td>
+<td style="font-weight: bold; text-align:right">10</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">99,097</td>
+<td style="display:none" data-continent="Africa">Africa</td>
+</tr><tr style="" role="row" class="even">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">151</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/curacao/">Curaçao</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">308</td>
+<td style="font-weight: bold; text-align:right">335</td>
+<td style="font-weight: bold; text-align:right">-8%</td>
+<td style="font-weight: bold; text-align:right">1,868</td>
+<td style="font-weight: bold; text-align:right">4</td>
+<td style="font-weight: bold; text-align:right">3</td>
+<td style="font-weight: bold; text-align:right">+33%</td>
+<td style="font-weight: bold; text-align:right">24</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">164,920</td>
+<td style="display:none" data-continent="North America">North America</td>
+</tr><tr style="" role="row" class="odd">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">152</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/oman/">Oman</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">304</td>
+<td style="font-weight: bold; text-align:right">273</td>
+<td style="font-weight: bold; text-align:right">+11%</td>
+<td style="font-weight: bold; text-align:right">58</td>
+<td style="font-weight: bold; text-align:right">2</td>
+<td style="font-weight: bold; text-align:right">5</td>
+<td style="font-weight: bold; text-align:right">-60%</td>
+<td style="font-weight: bold; text-align:right">0.4</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">5,266,179</td>
+<td style="display:none" data-continent="Asia">Asia</td>
+</tr><tr style="" role="row" class="even">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">153</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/antigua-and-barbuda/">Antigua and Barbuda</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">299</td>
+<td style="font-weight: bold; text-align:right">437</td>
+<td style="font-weight: bold; text-align:right">-32%</td>
+<td style="font-weight: bold; text-align:right">3,022</td>
+<td style="font-weight: bold; text-align:right">9</td>
+<td style="font-weight: bold; text-align:right">7</td>
+<td style="font-weight: bold; text-align:right">+29%</td>
+<td style="font-weight: bold; text-align:right">91</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">98,928</td>
+<td style="display:none" data-continent="North America">North America</td>
+</tr><tr style="" role="row" class="odd">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">154</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/sao-tome-and-principe/">Sao Tome and Principe</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">298</td>
+<td style="font-weight: bold; text-align:right">226</td>
+<td style="font-weight: bold; text-align:right">+32%</td>
+<td style="font-weight: bold; text-align:right">1,329</td>
+<td style="font-weight: bold; text-align:right">6</td>
+<td style="font-weight: bold; text-align:right">4</td>
+<td style="font-weight: bold; text-align:right">+50%</td>
+<td style="font-weight: bold; text-align:right">27</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">224,165</td>
+<td style="display:none" data-continent="Africa">Africa</td>
+</tr><tr style="" role="row" class="even">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">155</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/yemen/">Yemen</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">261</td>
+<td style="font-weight: bold; text-align:right">272</td>
+<td style="font-weight: bold; text-align:right">-4%</td>
+<td style="font-weight: bold; text-align:right">9</td>
+<td style="font-weight: bold; text-align:right">44</td>
+<td style="font-weight: bold; text-align:right">69</td>
+<td style="font-weight: bold; text-align:right">-36%</td>
+<td style="font-weight: bold; text-align:right">1</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">30,633,458</td>
+<td style="display:none" data-continent="Asia">Asia</td>
+</tr><tr style="" role="row" class="odd">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">156</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/djibouti/">Djibouti</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">248</td>
+<td style="font-weight: bold; text-align:right">160</td>
+<td style="font-weight: bold; text-align:right">+55%</td>
+<td style="font-weight: bold; text-align:right">247</td>
+<td style="font-weight: bold; text-align:right">3</td>
+<td style="font-weight: bold; text-align:right">2</td>
+<td style="font-weight: bold; text-align:right">+50%</td>
+<td style="font-weight: bold; text-align:right">3</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">1,005,684</td>
+<td style="display:none" data-continent="Africa">Africa</td>
+</tr><tr style="" role="row" class="even">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">157</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/democratic-republic-of-the-congo/">DRC</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">230</td>
+<td style="font-weight: bold; text-align:right">291</td>
+<td style="font-weight: bold; text-align:right">-21%</td>
+<td style="font-weight: bold; text-align:right">2</td>
+<td style="font-weight: bold; text-align:right">15</td>
+<td style="font-weight: bold; text-align:right">0</td>
+<td style="font-weight: bold; text-align:right">+1%</td>
+<td style="font-weight: bold; text-align:right">0.2</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">92,903,476</td>
+<td style="display:none" data-continent="Africa">Africa</td>
+</tr><tr style="" role="row" class="odd">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">158</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/iceland/">Iceland</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">228</td>
+<td style="font-weight: bold; text-align:right">170</td>
+<td style="font-weight: bold; text-align:right">+34%</td>
+
+<td style="font-weight: bold; text-align:right">663</td>
+<td style="font-weight: bold; text-align:right">0</td>
+<td style="font-weight: bold; text-align:right">0</td>
+<td style="font-weight: bold; text-align:right">0%</td>
+<td style="font-weight: bold; text-align:right">0</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">343,972</td>
+<td style="display:none" data-continent="Europe">Europe</td>
+</tr><tr style="" role="row" class="even">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">159</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/isle-of-man/">Isle of Man</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">223</td>
+<td style="font-weight: bold; text-align:right">143</td>
+<td style="font-weight: bold; text-align:right">+56%</td>
+<td style="font-weight: bold; text-align:right">2,606</td>
+<td style="font-weight: bold; text-align:right">0</td>
+<td style="font-weight: bold; text-align:right">2</td>
+<td style="font-weight: bold; text-align:right">-100%</td>
+<td style="font-weight: bold; text-align:right">0</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">85,588</td>
+<td style="display:none" data-continent="Europe">Europe</td>
+</tr><tr style="" role="row" class="odd">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">160</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/guinea/">Guinea</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">212</td>
+<td style="font-weight: bold; text-align:right">135</td>
+<td style="font-weight: bold; text-align:right">+57%</td>
+<td style="font-weight: bold; text-align:right">16</td>
+<td style="font-weight: bold; text-align:right">7</td>
+<td style="font-weight: bold; text-align:right">5</td>
+<td style="font-weight: bold; text-align:right">+40%</td>
+<td style="font-weight: bold; text-align:right">0.5</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">13,570,285</td>
+<td style="display:none" data-continent="Africa">Africa</td>
+</tr><tr style="" role="row" class="even">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">161</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/haiti/">Haiti</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">202</td>
+<td style="font-weight: bold; text-align:right">146</td>
+<td style="font-weight: bold; text-align:right">+38%</td>
+<td style="font-weight: bold; text-align:right">17</td>
+<td style="font-weight: bold; text-align:right">13</td>
+<td style="font-weight: bold; text-align:right">2</td>
+<td style="font-weight: bold; text-align:right">+550%</td>
+<td style="font-weight: bold; text-align:right">1</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">11,573,686</td>
+<td style="display:none" data-continent="North America">North America</td>
+</tr><tr style="" role="row" class="odd">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">162</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/sudan/">Sudan</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">201</td>
+<td style="font-weight: bold; text-align:right">285</td>
+<td style="font-weight: bold; text-align:right">-29%</td>
+<td style="font-weight: bold; text-align:right">4</td>
+<td style="font-weight: bold; text-align:right">19</td>
+<td style="font-weight: bold; text-align:right">38</td>
+<td style="font-weight: bold; text-align:right">-50%</td>
+<td style="font-weight: bold; text-align:right">0.4</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">45,107,490</td>
+<td style="display:none" data-continent="Africa">Africa</td>
+
+</tr><tr style="" role="row" class="even">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">163</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/channel-islands/">Channel Islands</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">197</td>
+<td style="font-weight: bold; text-align:right">240</td>
+<td style="font-weight: bold; text-align:right">-18%</td>
+<td style="font-weight: bold; text-align:right">1,120</td>
+<td style="font-weight: bold; text-align:right">0</td>
+<td style="font-weight: bold; text-align:right">2</td>
+<td style="font-weight: bold; text-align:right">-100%</td>
+<td style="font-weight: bold; text-align:right">0</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">175,837</td>
+<td style="display:none" data-continent="Europe">Europe</td>
+</tr><tr style="" role="row" class="odd">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">164</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/aruba/">Aruba</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">184</td>
+<td style="font-weight: bold; text-align:right">164</td>
+<td style="font-weight: bold; text-align:right">+12%</td>
+<td style="font-weight: bold; text-align:right">1,714</td>
+<td style="font-weight: bold; text-align:right">7</td>
+<td style="font-weight: bold; text-align:right">3</td>
+<td style="font-weight: bold; text-align:right">+133%</td>
+<td style="font-weight: bold; text-align:right">65</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">107,325</td>
+<td style="display:none" data-continent="North America">North America</td>
+</tr><tr style="" role="row" class="even">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">165</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/paraguay/">Paraguay</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">182</td>
+<td style="font-weight: bold; text-align:right">365</td>
+<td style="font-weight: bold; text-align:right">-50%</td>
+<td style="font-weight: bold; text-align:right">25</td>
+<td style="font-weight: bold; text-align:right">16</td>
+<td style="font-weight: bold; text-align:right">29</td>
+<td style="font-weight: bold; text-align:right">-45%</td>
+<td style="font-weight: bold; text-align:right">2</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">7,240,417</td>
+<td style="display:none" data-continent="South America">South America</td>
+</tr><tr style="" role="row" class="odd">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">166</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/saint-kitts-and-nevis/">Saint Kitts and Nevis</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">168</td>
+<td style="font-weight: bold; text-align:right">193</td>
+<td style="font-weight: bold; text-align:right">-13%</td>
+<td style="font-weight: bold; text-align:right">3,131</td>
+<td style="font-weight: bold; text-align:right">1</td>
+<td style="font-weight: bold; text-align:right">2</td>
+<td style="font-weight: bold; text-align:right">-50%</td>
+<td style="font-weight: bold; text-align:right">19</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">53,663</td>
+<td style="display:none" data-continent="North America">North America</td>
+</tr><tr style="" role="row" class="even">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">167</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/malawi/">Malawi</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">160</td>
+<td style="font-weight: bold; text-align:right">239</td>
+<td style="font-weight: bold; text-align:right">-33%</td>
+<td style="font-weight: bold; text-align:right">8</td>
+<td style="font-weight: bold; text-align:right">19</td>
+<td style="font-weight: bold; text-align:right">20</td>
+<td style="font-weight: bold; text-align:right">-5%</td>
+<td style="font-weight: bold; text-align:right">1.0</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">19,737,191</td>
+<td style="display:none" data-continent="Africa">Africa</td>
+</tr><tr style="" role="row" class="odd">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">168</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/sint-maarten/">Sint Maarten</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">143</td>
+<td style="font-weight: bold; text-align:right">101</td>
+<td style="font-weight: bold; text-align:right">+42%</td>
+<td style="font-weight: bold; text-align:right">3,289</td>
+<td style="font-weight: bold; text-align:right">4</td>
+<td style="font-weight: bold; text-align:right">2</td>
+<td style="font-weight: bold; text-align:right">+100%</td>
+<td style="font-weight: bold; text-align:right">92</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">43,475</td>
+<td style="display:none" data-continent="North America">North America</td>
+</tr><tr style="" role="row" class="even">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">169</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/malta/">Malta</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">125</td>
+<td style="font-weight: bold; text-align:right">244</td>
+<td style="font-weight: bold; text-align:right">-49%</td>
+<td style="font-weight: bold; text-align:right">282</td>
+<td style="font-weight: bold; text-align:right">4</td>
+<td style="font-weight: bold; text-align:right">6</td>
+<td style="font-weight: bold; text-align:right">-33%</td>
+<td style="font-weight: bold; text-align:right">9</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">442,993</td>
+<td style="display:none" data-continent="Europe">Europe</td>
+
+</tr><tr style="" role="row" class="odd">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">170</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/new-zealand/">New Zealand</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">124</td>
+<td style="font-weight: bold; text-align:right">148</td>
+<td style="font-weight: bold; text-align:right">-16%</td>
+<td style="font-weight: bold; text-align:right">25</td>
+<td style="font-weight: bold; text-align:right">0</td>
+<td style="font-weight: bold; text-align:right">0</td>
+<td style="font-weight: bold; text-align:right">0%</td>
+<td style="font-weight: bold; text-align:right">0</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">5,002,100</td>
+<td style="display:none" data-continent="Australia/Oceania">Australia/Oceania</td>
+</tr><tr style="" role="row" class="even">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">171</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/south-sudan/">South Sudan</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">121</td>
+<td style="font-weight: bold; text-align:right">195</td>
+<td style="font-weight: bold; text-align:right">-38%</td>
+<td style="font-weight: bold; text-align:right">11</td>
+<td style="font-weight: bold; text-align:right">7</td>
+<td style="font-weight: bold; text-align:right">1</td>
+<td style="font-weight: bold; text-align:right">+600%</td>
+<td style="font-weight: bold; text-align:right">0.6</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">11,355,332</td>
+<td style="display:none" data-continent="Africa">Africa</td>
+</tr><tr style="" role="row" class="odd">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">172</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/burkina-faso/">Burkina Faso</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">106</td>
+<td style="font-weight: bold; text-align:right">96</td>
+<td style="font-weight: bold; text-align:right">+10%</td>
+<td style="font-weight: bold; text-align:right">5</td>
+<td style="font-weight: bold; text-align:right">8</td>
+<td style="font-weight: bold; text-align:right">1</td>
+<td style="font-weight: bold; text-align:right">+700%</td>
+<td style="font-weight: bold; text-align:right">0.4</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">21,607,188</td>
+<td style="display:none" data-continent="Africa">Africa</td>
+</tr><tr style="" role="row" class="even">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">173</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/senegal/">Senegal</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">106</td>
+<td style="font-weight: bold; text-align:right">182</td>
+<td style="font-weight: bold; text-align:right">-42%</td>
+<td style="font-weight: bold; text-align:right">6</td>
+<td style="font-weight: bold; text-align:right">10</td>
+<td style="font-weight: bold; text-align:right">17</td>
+<td style="font-weight: bold; text-align:right">-41%</td>
+<td style="font-weight: bold; text-align:right">0.6</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">17,285,906</td>
+<td style="display:none" data-continent="Africa">Africa</td>
+</tr><tr style="" role="row" class="odd">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">174</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/mayotte/">Mayotte</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">94</td>
+<td style="font-weight: bold; text-align:right">110</td>
+<td style="font-weight: bold; text-align:right">-15%</td>
+<td style="font-weight: bold; text-align:right">335</td>
+<td style="font-weight: bold; text-align:right">2</td>
+<td style="font-weight: bold; text-align:right">1</td>
+<td style="font-weight: bold; text-align:right">+100%</td>
+<td style="font-weight: bold; text-align:right">7</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">280,903</td>
+<td style="display:none" data-continent="Africa">Africa</td>
+</tr><tr style="" role="row" class="even">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">175</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/mali/">Mali</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">93</td>
+<td style="font-weight: bold; text-align:right">79</td>
+<td style="font-weight: bold; text-align:right">+18%</td>
+<td style="font-weight: bold; text-align:right">4</td>
+<td style="font-weight: bold; text-align:right">2</td>
+<td style="font-weight: bold; text-align:right">2</td>
+<td style="font-weight: bold; text-align:right">0%</td>
+<td style="font-weight: bold; text-align:right">0.1</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">20,966,973</td>
+<td style="display:none" data-continent="Africa">Africa</td>
+</tr><tr style="" role="row" class="odd">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">176</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/greenland/">Greenland</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">89</td>
+<td style="font-weight: bold; text-align:right">74</td>
+<td style="font-weight: bold; text-align:right">+20%</td>
+<td style="font-weight: bold; text-align:right">1,564</td>
+<td style="font-weight: bold; text-align:right">0</td>
+<td style="font-weight: bold; text-align:right">0</td>
+<td style="font-weight: bold; text-align:right">0%</td>
+<td style="font-weight: bold; text-align:right">0</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">56,891</td>
+
+<td style="display:none" data-continent="North America">North America</td>
+</tr><tr style="" role="row" class="even">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">177</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/saint-martin/">Saint Martin</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">81</td>
+<td style="font-weight: bold; text-align:right">64</td>
+<td style="font-weight: bold; text-align:right">+27%</td>
+<td style="font-weight: bold; text-align:right">2,052</td>
+<td style="font-weight: bold; text-align:right">8</td>
+<td style="font-weight: bold; text-align:right">2</td>
+<td style="font-weight: bold; text-align:right">+300%</td>
+<td style="font-weight: bold; text-align:right">203</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">39,477</td>
+<td style="display:none" data-continent="North America">North America</td>
+</tr><tr style="" role="row" class="odd">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">178</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/central-african-republic/">CAR</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">62</td>
+<td style="font-weight: bold; text-align:right">0</td>
+<td style="font-weight: bold; text-align:right">+6,200%</td>
+<td style="font-weight: bold; text-align:right">13</td>
+<td style="font-weight: bold; text-align:right">0</td>
+<td style="font-weight: bold; text-align:right">0</td>
+<td style="font-weight: bold; text-align:right">0%</td>
+<td style="font-weight: bold; text-align:right">0</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">4,933,076</td> 
+<td style="display:none" data-continent="Africa">Africa</td>
+</tr><tr style="" role="row" class="even">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">179</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/faeroe-islands/">Faeroe Islands</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">56</td>
+<td style="font-weight: bold; text-align:right">24</td>
+<td style="font-weight: bold; text-align:right">+133%</td>
+<td style="font-weight: bold; text-align:right">1,141</td>
+<td style="font-weight: bold; text-align:right">0</td>
+<td style="font-weight: bold; text-align:right">0</td>
+<td style="font-weight: bold; text-align:right">0%</td>
+<td style="font-weight: bold; text-align:right">0</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">49,092</td>
+<td style="display:none" data-continent="Europe">Europe</td>
+</tr><tr style="" role="row" class="odd">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">180</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/taiwan/">Taiwan</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">52</td>
+<td style="font-weight: bold; text-align:right">55</td>
+<td style="font-weight: bold; text-align:right">-5%</td>
+<td style="font-weight: bold; text-align:right">2</td>
+<td style="font-weight: bold; text-align:right">2</td>
+<td style="font-weight: bold; text-align:right">0</td>
+<td style="font-weight: bold; text-align:right">+200%</td>
+<td style="font-weight: bold; text-align:right">0.1</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">23,869,930</td>
+<td style="display:none" data-continent="Asia">Asia</td>
+</tr><tr style="" role="row" class="even">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">181</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/gambia/">Gambia</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">44</td>
+<td style="font-weight: bold; text-align:right">47</td>
+<td style="font-weight: bold; text-align:right">-6%</td>
+<td style="font-weight: bold; text-align:right">18</td>
+<td style="font-weight: bold; text-align:right">5</td>
+<td style="font-weight: bold; text-align:right">2</td>
+<td style="font-weight: bold; text-align:right">+150%</td>
+<td style="font-weight: bold; text-align:right">2</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">2,500,036</td>
+<td style="display:none" data-continent="Africa">Africa</td>
+</tr><tr style="" role="row" class="odd">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">182</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/andorra/">Andorra</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">43</td>
+<td style="font-weight: bold; text-align:right">41</td>
+<td style="font-weight: bold; text-align:right">+5%</td>
+<td style="font-weight: bold; text-align:right">555</td>
+<td style="font-weight: bold; text-align:right">0</td>
+<td style="font-weight: bold; text-align:right">0</td>
+<td style="font-weight: bold; text-align:right">0%</td>
+<td style="font-weight: bold; text-align:right">0</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">77,417</td>
+<td style="display:none" data-continent="Europe">Europe</td>
+</tr><tr style="" role="row" class="even">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">183</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/caribbean-netherlands/">Caribbean Netherlands</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">41</td>
+<td style="font-weight: bold; text-align:right">41</td>
+<td style="font-weight: bold; text-align:right">0%</td>
+<td style="font-weight: bold; text-align:right">1,546</td>
+<td style="font-weight: bold; text-align:right">1</td>
+<td style="font-weight: bold; text-align:right">1</td>
+<td style="font-weight: bold; text-align:right">0%</td>
+<td style="font-weight: bold; text-align:right">38</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">26,523</td>
+<td style="display:none" data-continent="North America">North America</td>
+ </tr><tr style="" role="row" class="odd">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">184</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/gibraltar/">Gibraltar</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">34</td>
+<td style="font-weight: bold; text-align:right">56</td>
+<td style="font-weight: bold; text-align:right">-39%</td>
+<td style="font-weight: bold; text-align:right">1,010</td>
+<td style="font-weight: bold; text-align:right">0</td>
+<td style="font-weight: bold; text-align:right">0</td>
+<td style="font-weight: bold; text-align:right">0%</td>
+<td style="font-weight: bold; text-align:right">0</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">33,679</td>
+<td style="display:none" data-continent="Europe">Europe</td>
+ </tr><tr style="" role="row" class="even">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">185</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/liechtenstein/">Liechtenstein</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">34</td>
+<td style="font-weight: bold; text-align:right">29</td>
+<td style="font-weight: bold; text-align:right">+17%</td>
+<td style="font-weight: bold; text-align:right">889</td>
+<td style="font-weight: bold; text-align:right">0</td>
+<td style="font-weight: bold; text-align:right">0</td>
+<td style="font-weight: bold; text-align:right">0%</td>
+<td style="font-weight: bold; text-align:right">0</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">38,263</td>
+<td style="display:none" data-continent="Europe">Europe</td>
+</tr><tr style="" role="row" class="odd">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">186</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/anguilla/">Anguilla</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">33</td>
+<td style="font-weight: bold; text-align:right">19</td>
+<td style="font-weight: bold; text-align:right">+74%</td>
+<td style="font-weight: bold; text-align:right">2,176</td>
+<td style="font-weight: bold; text-align:right">1</td>
+<td style="font-weight: bold; text-align:right">0</td>
+<td style="font-weight: bold; text-align:right">+100%</td>
+<td style="font-weight: bold; text-align:right">66</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">15,168</td>
+<td style="display:none" data-continent="North America">North America</td>
+</tr><tr style="" role="row" class="even">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">187</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/turks-and-caicos-islands/">Turks and Caicos</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">30</td>
+<td style="font-weight: bold; text-align:right">47</td>
+<td style="font-weight: bold; text-align:right">-36%</td>
+<td style="font-weight: bold; text-align:right">762</td>
+<td style="font-weight: bold; text-align:right">1</td>
+<td style="font-weight: bold; text-align:right">1</td>
+<td style="font-weight: bold; text-align:right">0%</td>
+<td style="font-weight: bold; text-align:right">25</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">39,362</td>
+<td style="display:none" data-continent="North America">North America</td>
+</tr><tr style="" role="row" class="odd">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">188</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/san-marino/">San Marino</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">29</td>
+<td style="font-weight: bold; text-align:right">39</td>
+<td style="font-weight: bold; text-align:right">-26%</td>
+<td style="font-weight: bold; text-align:right">852</td>
+<td style="font-weight: bold; text-align:right">0</td>
+<td style="font-weight: bold; text-align:right">0</td>
+<td style="font-weight: bold; text-align:right">0%</td>
+<td style="font-weight: bold; text-align:right">0</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">34,019</td>
+<td style="display:none" data-continent="Europe">Europe</td>
+</tr><tr style="" role="row" class="even">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">189</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/china-hong-kong-sar/">Hong Kong</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">28</td>
+<td style="font-weight: bold; text-align:right">15</td>
+<td style="font-weight: bold; text-align:right">+87%</td>
+<td style="font-weight: bold; text-align:right">4</td>
+<td style="font-weight: bold; text-align:right">0</td>
+<td style="font-weight: bold; text-align:right">1</td>
+<td style="font-weight: bold; text-align:right">-100%</td>
+<td style="font-weight: bold; text-align:right">0</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">7,571,920</td>
+<td style="display:none" data-continent="Asia">Asia</td>
+</tr><tr style="" role="row" class="odd">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">190</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/eritrea/">Eritrea</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">23</td>
+<td style="font-weight: bold; text-align:right">16</td>
+<td style="font-weight: bold; text-align:right">+44%</td>
+<td style="font-weight: bold; text-align:right">6</td>
+<td style="font-weight: bold; text-align:right">2</td>
+<td style="font-weight: bold; text-align:right">0</td>
+<td style="font-weight: bold; text-align:right">+200%</td>
+<td style="font-weight: bold; text-align:right">0.6</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">3,606,842</td>
+<td style="display:none" data-continent="Africa">Africa</td>
+</tr><tr style="" role="row" class="even">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">191</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/niger/">Niger</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">23</td>
+<td style="font-weight: bold; text-align:right">32</td>
+<td style="font-weight: bold; text-align:right">-28%</td>
+<td style="font-weight: bold; text-align:right">0.9</td>
+<td style="font-weight: bold; text-align:right">0</td>
+<td style="font-weight: bold; text-align:right">2</td>
+<td style="font-weight: bold; text-align:right">-100%</td>
+<td style="font-weight: bold; text-align:right">0</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">25,281,055</td>
+
+<td style="display:none" data-continent="Africa">Africa</td>
+</tr><tr style="" role="row" class="odd">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">192</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/cayman-islands/">Cayman Islands</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">21</td>
+<td style="font-weight: bold; text-align:right">45</td>
+<td style="font-weight: bold; text-align:right">-53%</td>
+<td style="font-weight: bold; text-align:right">315</td>
+<td style="font-weight: bold; text-align:right">0</td>
+<td style="font-weight: bold; text-align:right">0</td>
+<td style="font-weight: bold; text-align:right">0%</td>
+<td style="font-weight: bold; text-align:right">0</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">66,672</td>
+<td style="display:none" data-continent="North America">North America</td>
+</tr><tr style="" role="row" class="even">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">193</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/guinea-bissau/">Guinea-Bissau</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">21</td>
+<td style="font-weight: bold; text-align:right">57</td>
+<td style="font-weight: bold; text-align:right">-63%</td>
+<td style="font-weight: bold; text-align:right">10</td>
+<td style="font-weight: bold; text-align:right">5</td>
+<td style="font-weight: bold; text-align:right">5</td>
+<td style="font-weight: bold; text-align:right">0%</td>
+<td style="font-weight: bold; text-align:right">2</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">2,025,162</td>
+<td style="display:none" data-continent="Africa">Africa</td>
+</tr><tr style="" role="row" class="odd">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">194</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/saint-barthelemy/">St. Barth</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">17</td>
+<td style="font-weight: bold; text-align:right">6</td>
+<td style="font-weight: bold; text-align:right">+183%</td>
+<td style="font-weight: bold; text-align:right">1,715</td>
+<td style="font-weight: bold; text-align:right">1</td>
+<td style="font-weight: bold; text-align:right">0</td>
+<td style="font-weight: bold; text-align:right">+100%</td>
+<td style="font-weight: bold; text-align:right">101</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">9,914</td>
+<td style="display:none" data-continent="North America">North America</td>
+</tr><tr style="" role="row" class="even">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">195</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/monaco/">Monaco</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">13</td>
+<td style="font-weight: bold; text-align:right">15</td>
+<td style="font-weight: bold; text-align:right">-13%</td>
+<td style="font-weight: bold; text-align:right">328</td>
+<td style="font-weight: bold; text-align:right">0</td>
+<td style="font-weight: bold; text-align:right">0</td>
+<td style="font-weight: bold; text-align:right">0%</td>
+<td style="font-weight: bold; text-align:right">0</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">39,585</td>
+<td style="display:none" data-continent="Europe">Europe</td>
+</tr><tr style="" role="row" class="odd">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">196</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/comoros/">Comoros</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">8</td>
+<td style="font-weight: bold; text-align:right">10</td>
+<td style="font-weight: bold; text-align:right">-20%</td>
+<td style="font-weight: bold; text-align:right">9</td>
+<td style="font-weight: bold; text-align:right">0</td>
+<td style="font-weight: bold; text-align:right">0</td>
+<td style="font-weight: bold; text-align:right">0%</td>
+<td style="font-weight: bold; text-align:right">0</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">892,375</td>
+<td style="display:none" data-continent="Africa">Africa</td>
+</tr><tr style="" role="row" class="even">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">197</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/chad/">Chad</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">5</td>
+<td style="font-weight: bold; text-align:right">12</td>
+<td style="font-weight: bold; text-align:right">-58%</td>
+<td style="font-weight: bold; text-align:right">0.3</td>
+<td style="font-weight: bold; text-align:right">0</td>
+<td style="font-weight: bold; text-align:right">0</td>
+<td style="font-weight: bold; text-align:right">0%</td>
+<td style="font-weight: bold; text-align:right">0</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">17,004,571</td>
+<td style="display:none" data-continent="Africa">Africa</td>
+</tr><tr style="" role="row" class="odd">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">198</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/liberia/">Liberia</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">5</td>
+<td style="font-weight: bold; text-align:right">16</td>
+<td style="font-weight: bold; text-align:right">-69%</td>
+<td style="font-weight: bold; text-align:right">1.0</td>
+<td style="font-weight: bold; text-align:right">0</td>
+<td style="font-weight: bold; text-align:right">0</td>
+<td style="font-weight: bold; text-align:right">0%</td>
+<td style="font-weight: bold; text-align:right">0</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">5,203,770</td>
+<td style="display:none" data-continent="Africa">Africa</td>
+</tr><tr style="" role="row" class="even">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">199</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/china-macao-sar/">Macao</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">3</td>
+<td style="font-weight: bold; text-align:right">0</td>
+<td style="font-weight: bold; text-align:right">+300%</td>
+<td style="font-weight: bold; text-align:right">5</td>
+<td style="font-weight: bold; text-align:right">0</td>
+<td style="font-weight: bold; text-align:right">0</td>
+<td style="font-weight: bold; text-align:right">0%</td>
+<td style="font-weight: bold; text-align:right">0</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">660,232</td>
+<td style="display:none" data-continent="Asia">Asia</td>
+</tr><tr style="" role="row" class="odd">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">200</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/bhutan/">Bhutan</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">2</td>
+<td style="font-weight: bold; text-align:right">1</td>
+<td style="font-weight: bold; text-align:right">+100%</td>
+<td style="font-weight: bold; text-align:right">3</td>
+<td style="font-weight: bold; text-align:right">0</td>
+<td style="font-weight: bold; text-align:right">0</td>
+<td style="font-weight: bold; text-align:right">0%</td>
+<td style="font-weight: bold; text-align:right">0</td>
+ 
+
+
+
+<td style="font-weight: bold; text-align:right">782,072</td>
+<td style="display:none" data-continent="Asia">Asia</td>
+</tr><tr style="" role="row" class="even">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">201</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/montserrat/">Montserrat</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">1</td>
+<td style="font-weight: bold; text-align:right">1</td>
+<td style="font-weight: bold; text-align:right">0%</td>
+<td style="font-weight: bold; text-align:right">200</td>
+<td style="font-weight: bold; text-align:right">0</td>
+<td style="font-weight: bold; text-align:right">0</td>
+<td style="font-weight: bold; text-align:right">0%</td>
+<td style="font-weight: bold; text-align:right">0</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">4,996</td>
+<td style="display:none" data-continent="North America">North America</td>
+</tr><tr style="" role="row" class="odd">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">202</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/sierra-leone/">Sierra Leone</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">1</td>
+<td style="font-weight: bold; text-align:right">13</td>
+<td style="font-weight: bold; text-align:right">-92%</td>
+<td style="font-weight: bold; text-align:right">0.1</td>
+<td style="font-weight: bold; text-align:right">0</td>
+<td style="font-weight: bold; text-align:right">0</td>
+<td style="font-weight: bold; text-align:right">0%</td>
+<td style="font-weight: bold; text-align:right">0</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">8,176,452</td>
+<td style="display:none" data-continent="Africa">Africa</td>
+</tr><tr style="" role="row" class="even">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">203</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/cameroon/">Cameroon</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">0</td>
+<td style="font-weight: bold; text-align:right">1,204</td>
+<td style="font-weight: bold; text-align:right">-100%</td>
+<td style="font-weight: bold; text-align:right">0</td>
+<td style="font-weight: bold; text-align:right">0</td>
+<td style="font-weight: bold; text-align:right">11</td>
+<td style="font-weight: bold; text-align:right">-100%</td>
+<td style="font-weight: bold; text-align:right">0</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">27,357,727</td>
+<td style="display:none" data-continent="Africa">Africa</td>
+</tr><tr style="" role="row" class="odd">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">204</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/french-polynesia/">French Polynesia</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">0</td>
+<td style="font-weight: bold; text-align:right">0</td>
+
+<td style="font-weight: bold; text-align:right">0%</td>
+<td style="font-weight: bold; text-align:right">0</td>
+<td style="font-weight: bold; text-align:right">18</td>
+<td style="font-weight: bold; text-align:right">42</td>
+<td style="font-weight: bold; text-align:right">-57%</td>
+<td style="font-weight: bold; text-align:right">64</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">282,909</td>
+<td style="display:none" data-continent="Australia/Oceania">Australia/Oceania</td>
+</tr><tr style="" role="row" class="even">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">205</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/madagascar/">Madagascar</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">0</td>
+<td style="font-weight: bold; text-align:right">4</td>
+<td style="font-weight: bold; text-align:right">-100%</td>
+<td style="font-weight: bold; text-align:right">0</td>
+<td style="font-weight: bold; text-align:right">0</td>
+<td style="font-weight: bold; text-align:right">0</td>
+<td style="font-weight: bold; text-align:right">0%</td>
+<td style="font-weight: bold; text-align:right">0</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">28,565,525</td>
+<td style="display:none" data-continent="Africa">Africa</td>
+</tr><tr style="" role="row" class="odd">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">206</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;"><a class="mt_a" href="/coronavirus/country/tajikistan/">Tajikistan</a></td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">0</td>
+<td style="font-weight: bold; text-align:right">20</td>
+<td style="font-weight: bold; text-align:right">-100%</td>
+<td style="font-weight: bold; text-align:right">0</td>
+<td style="font-weight: bold; text-align:right">0</td>
+<td style="font-weight: bold; text-align:right">0</td>
+<td style="font-weight: bold; text-align:right">0%</td>
+<td style="font-weight: bold; text-align:right">0</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">9,800,959</td>
+<td style="display:none" data-continent="Asia">Asia</td>
+</tr><tr style="" role="row" class="even">
+<td style="font-size:12px;color: grey;text-align:center;vertical-align:middle;">207</td>
+<td style="font-weight: bold; font-size:15px; text-align:left;">Palau</td>
+<td style="font-weight: bold; text-align:right" class="sorting_1">0</td>
+<td style="font-weight: bold; text-align:right">3</td>
+<td style="font-weight: bold; text-align:right">-100%</td>
+<td style="font-weight: bold; text-align:right">0</td>
+<td style="font-weight: bold; text-align:right">0</td>
+<td style="font-weight: bold; text-align:right">0</td>
+<td style="font-weight: bold; text-align:right">0%</td>
+<td style="font-weight: bold; text-align:right">0</td>
+
+
+
+
+<td style="font-weight: bold; text-align:right">18,200</td>
+<td style="display:none" data-continent="Australia/Oceania">Australia/Oceania</td>
+</tr></tbody>
+<tbody class="body_continents">
+<tr class="total_row_world row_continent" data-continent="Asia" style="display: none">
+<td></td>
+<td style="text-align:left;">
+<nobr>Asia</nobr>
+</td>
+<td>1,174,719</td>
+<td>1,331,030</td>
+<td>-12%</td>
+<td></td>
+<td>16,474</td>
+<td>20,680</td>
+<td>
+-20% </td>
+<td></td>
+<td style="display: none;">-156,311</td>
+<td style="display: none;"></td>
+<td style="display: none;">-4,206</td>
+<td style="display: none;"></td>
+<td></td>
+<td style="display:none;" data-continent="Asia">Asia</td>
+</tr>
+<tr class="total_row_world row_continent" data-continent="Australia/Oceania" style="display: none">
+<td></td>
+<td style="text-align:left;">
+<nobr>Oceania</nobr>
+ </td>
+<td>15,990</td>
+<td>16,435</td>
+<td>-3%</td>
+<td></td>
+<td>182</td>
+<td>160</td>
+<td>
++14% </td>
+<td></td>
+<td style="display: none;">-445</td>
+<td style="display: none;"></td>
+<td style="display: none;">+22</td>
+<td style="display: none;"></td>
+<td></td>
+<td style="display:none;" data-continent="Australia/Oceania">Australia/Oceania</td>
+</tr>
+<tr class="total_row_world row_continent" data-continent="North America" style="display: none">
+<td></td>
+<td style="text-align:left;">
+<nobr>North America</nobr>
+</td>
+<td>985,687</td>
+<td>1,227,748</td>
+<td>-20%</td>
+<td></td>
+<td>17,304</td>
+<td>18,118</td>
+<td>
+-4% </td>
+<td></td>
+<td style="display: none;">-242,061</td>
+<td style="display: none;"></td>
+<td style="display: none;">-814</td>
+<td style="display: none;"></td>
+<td></td>
+<td style="display:none;" data-continent="North America">North America</td>
+</tr>
+<tr class="total_row_world row_continent" data-continent="Europe" style="display: none">
+<td></td>
+<td style="text-align:left;">
+<nobr>Europe</nobr>
+</td>
+<td>828,955</td>
+<td>813,157</td>
+<td>+2%</td>
+<td></td>
+<td>12,144</td>
+<td>11,661</td>
+<td>
++4% </td>
+<td></td>
+<td style="display: none;">+15,798</td>
+<td style="display: none;"></td>
+<td style="display: none;">+483</td>
+<td style="display: none;"></td>
+<td></td>
+<td style="display:none;" data-continent="Europe">Europe</td>
+</tr>
+<tr class="total_row_world row_continent" data-continent="Africa" style="display: none">
+<td></td>
+ <td style="text-align:left;">
+<nobr>Africa</nobr>
+</td>
+<td>83,159</td>
+<td>110,931</td>
+<td>-25%</td>
+<td></td>
+<td>2,705</td>
+<td>3,292</td>
+<td>
+-18% </td>
+<td></td>
+<td style="display: none;">-27,772</td>
+<td style="display: none;"></td>
+<td style="display: none;">-587</td>
+<td style="display: none;"></td>
+<td></td>
+<td style="display:none;" data-continent="Africa">Africa</td>
+</tr>
+<tr class="total_row_world row_continent" data-continent="South America" style="display: none">
+<td></td>
+<td style="text-align:left;">
+<nobr>South America</nobr>
+</td>
+<td>176,067</td>
+<td>191,007</td>
+<td>-8%</td>
+<td></td>
+<td>5,109</td>
+<td>6,139</td>
+<td>
+-17% </td>
+<td></td>
+<td style="display: none;">-14,940</td>
+<td style="display: none;"></td>
+<td style="display: none;">-1,030</td>
+<td style="display: none;"></td>
+<td></td>
+<td style="display:none;" data-continent="South America">South America</td>
+</tr>
+</tbody>
+<tbody class="total_row_body body_world">
+<tr class="total_row">
+<td></td>
+<td style="text-align:left;">World</td>
+<td>3,264,577</td>
+<td>3,690,308</td>
+<td>-12%</td>
+<td></td>
+<td>53,918</td>
+<td>60,050</td>
+<td>-10%</td>
+<td></td>
+<td style="display: none;">-425,731</td>
+<td style="display: none;"></td>
+<td style="display: none;">-6,132</td>
+<td style="display: none;"></td>
+<td></td>
+<td style="display:none" data-continent="all">All</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div style="clear:both; font-size:13px; margin-top:25px; padding-bottom:45px; line-height: 13px!important;">
+
+{%endblock%}
