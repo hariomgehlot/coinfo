@@ -87,5 +87,9 @@ def statewise(request):
 def tests(request):
      return render(request,"tests.html")
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> dfd27d26cbba451cbabd942934b702f2702a3c48
 def world(request):
      return render(request,"world.html")
